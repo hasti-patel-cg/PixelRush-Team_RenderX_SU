@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campus Event Hub | Swaminarayan University</title>
+  <meta name="description" content="Tech fests, cultural nights, workshops, and sports meets - all verified campus events in one unified space.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@400;600;700&family=Space+Grotesk:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar">
+    <a class="navbar__logo" href="#" aria-label="Campus Event Hub home">
+      <img src="https://www.figma.com/api/mcp/asset/f8bbb59c-a324-44e9-8dbc-4fd00ad4f92d.png" alt="Campus Event Hub logo">
+    </a>
+
+    <nav class="navbar__links" aria-label="Main navigation">
+      <a class="nav-pill nav-pill--home" href="#">
+        <svg class="nav-pill__home-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v10h14V10"/></svg>
+        <span>Home</span>
+      </a>
+
+      <a class="nav-pill nav-pill--events" href="#">
+        <img src="https://www.figma.com/api/mcp/asset/0bf1fec1-b557-452b-96b1-70399f082330.svg" alt="" width="11" height="11">
+        <span>Events</span>
+      </a>
+
+      <a class="nav-pill nav-pill--thanganat" href="#">
+        <img src="https://www.figma.com/api/mcp/asset/c5a8416e-d333-48ff-80be-ed51b41cfe12.svg" alt="" width="10" height="10">
+        <span>Thanganat 5.0</span>
+      </a>
+
+      <a class="nav-pill nav-pill--passes" href="#">
+        <span class="nav-pill__passes-icon">
+          <img src="https://www.figma.com/api/mcp/asset/21fa892d-32d7-4d3c-a2b7-bd0baba5b145.svg" alt="" width="17" height="9">
+        </span>
+        <span>My Passes</span>
+        <span class="nav-badge nav-badge--gold">3</span>
+      </a>
+
+      <a class="nav-pill nav-pill--calendar" href="#">
+        <img src="https://www.figma.com/api/mcp/asset/c6795a55-7b39-4415-9899-af556763dda8.svg" alt="" width="9" height="10">
+        <span>Calendar</span>
+        <span class="nav-badge nav-badge--pink">2</span>
+      </a>
+    </nav>
+
+    <div class="account">
+      <div class="account__icon">
+        <button class="account__icon-btn" type="button" aria-label="Notifications">
+          <img class="account__ring" src="https://www.figma.com/api/mcp/asset/41ed5562-c922-4468-8cc6-4e8ed416f29e.svg" alt="">
+        </button>
+        <img class="account__bell" src="https://www.figma.com/api/mcp/asset/35218b5c-7b72-4729-9223-018c64f66910.svg" alt="">
+        <img class="account__dot" src="https://www.figma.com/api/mcp/asset/e06c7608-78b2-4f12-b8c8-1ab016d8e098.svg" alt="">
+      </div>
+
+      <div class="account__icon">
+        <a class="account__icon-btn" href="#" aria-label="Profile">
+          <img class="account__ring" src="https://www.figma.com/api/mcp/asset/e3dbbaa6-8101-4e72-b7ab-141093bbb952.svg" alt="">
+        </a>
+        <span class="account__user">
+          <img src="https://www.figma.com/api/mcp/asset/d389f5e0-8050-4213-903f-39bae2247bd2.svg" alt="">
+        </span>
+      </div>
+
+      <div class="account__details">
+        <button class="account-card" type="button">
+          <span class="account-card__photo">
+            <img src="https://www.figma.com/api/mcp/asset/fed3beb0-1df6-4b80-9ce4-539c32f1e996.png" alt="Shivam Tripathi" width="32" height="32">
+          </span>
+          <span class="account-card__text">
+            <span class="account-card__name">Shivam Tripathi</span>
+            <span class="account-card__role">Student</span>
+          </span>
+          <span class="account-card__arrow">
+            <img src="https://www.figma.com/api/mcp/asset/1c38ee90-d84a-4027-a995-aac36b9cccf6.svg" alt="">
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <p class="hero__chip">Campus Event hub &nbsp;•&nbsp; SU CAMPUS</p>
+
+      <h1 class="hero__title">
+        Discover <em class="hero__highlight">what's happening</em> on our campus
+      </h1>
+
+      <p class="hero__text">
+        Tech fests, cultural nights, workshops, and sports meets - all verified campus events in one unified space.
+      </p>
+
+      <ul class="stats">
+        <li class="stat-card">
+          <span class="stat-card__value">45+</span>
+          <span class="stat-card__label">ACTIVE CLUBS</span>
+        </li>
+        <li class="stat-card">
+          <span class="stat-card__value">120+</span>
+          <span class="stat-card__label">ANNUAL EVENTS</span>
+        </li>
+        <li class="stat-card stat-card--soft">
+          <span class="stat-card__value">100%</span>
+          <span class="stat-card__label">FREE ACCESS PASS</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ===================== LIVE EVENT ===================== -->
+    <section class="live-event">
+      <div class="live-event__head">
+        <div class="live-event__title-wrap">
+          <span class="live-dot" aria-hidden="true">
+            <span class="live-dot__ping"></span>
+            <span class="live-dot__core"></span>
+          </span>
+          <h2 class="live-event__title">Event Ongoing Right Now </h2>
+        </div>
+        <div class="live-event__tags">
+          <span class="mini-tag">Featured </span>
+          <span class="mini-tag">LIVE FEED</span>
+        </div>
+      </div>
+
+      <article class="feature-card">
+        <div class="feature-card__media">
+          <div class="feature-card__img-wrap">
+            <img src="https://www.figma.com/api/mcp/asset/e3d44da1-8620-4809-b19e-02c8930cdef1.png" alt="Thanganat 5.0 - Most Awaited Garba Night poster">
+          </div>
+          <div class="feature-card__tint"></div>
+          <div class="feature-card__shade"></div>
+        </div>
+
+        <div class="feature-card__info">
+          <div class="feature-card__body">
+            <p class="feature-card__eyebrow">Cultural Extravaganza • Annual Fest Series</p>
+            <h3 class="feature-card__title">Thanganat 5.0</h3>
+            <p class="feature-card__desc">The grandest campus Garba &amp; Dandiya celebration with Kirtidan Gadhvi bringing together thousands of students, vibrant beats, traditional folk dance, and celebrity DJ performances!</p>
+
+            <ul class="feature-card__meta">
+              <li class="meta-row meta-row--place">
+                <img src="https://www.figma.com/api/mcp/asset/4f3788a3-2809-42d9-a66f-29dffa079327.svg" alt="" width="17" height="17">
+                <span>New Cricket Ground, SU Campus</span>
+              </li>
+              <li class="meta-row meta-row--time">
+                <img src="https://www.figma.com/api/mcp/asset/67a0f205-b335-4b8e-b501-a99b23c75254.svg" alt="" width="17" height="17">
+                <span>4th October, Wednesday • 7:00 PM to 12:00 AM</span>
+              </li>
+              <li class="meta-row meta-row--pass">
+                <img src="https://www.figma.com/api/mcp/asset/17c69139-140b-466b-a4ec-d68e5c57f5c6.svg" alt="" width="17" height="13">
+                <span>Pass Required (Free for SU Students)</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="feature-card__footer">
+            <div class="checkin">
+              <span class="checkin__icon">
+                <img src="https://www.figma.com/api/mcp/asset/872f1ca0-0fcc-4059-929e-ce0cf0dce237.svg" alt="" width="20" height="10">
+              </span>
+              <div class="checkin__text">
+                <span class="checkin__count">1,420+</span>
+                <span class="checkin__label">CHECKED-IN NOW</span>
+              </div>
+            </div>
+            <a class="btn-gold btn-gold--pulse" href="#">
+              <span>View Details &amp; Passes</span>
+              <img src="https://www.figma.com/api/mcp/asset/80017ffb-55bb-4280-90a6-1c863c2fe674.svg" alt="" width="15" height="15">
+            </a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ===================== HOW IT WORKS + PARTNERS ===================== -->
+    <div class="info-sections">
+
+      <section class="how">
+        <div class="how__head">
+          <p class="how__eyebrow">FRICTIONLESS EXPERIENCE</p>
+          <h2 class="how__title">How CEH Works</h2>
+          <p class="how__text">Three simple steps designed exclusively for Swaminarayan University students, staff, and honorary guests.</p>
+        </div>
+
+        <ol class="steps">
+          <li class="step-card">
+            <span class="step-card__icon step-card__icon--one">
+              <img src="https://www.figma.com/api/mcp/asset/d9f694da-c7a3-427b-964e-b809c9f916d6.svg" alt="" width="27" height="27">
+            </span>
+            <span class="step-card__tag">STEP 01</span>
+            <h3 class="step-card__title">1. Discover</h3>
+            <p class="step-card__text">Explore campus happenings curated by academic faculties, verified sports boards, and cultural clubs all under one roof.</p>
+          </li>
+
+          <li class="step-card">
+            <span class="step-card__icon step-card__icon--two">
+              <img src="https://www.figma.com/api/mcp/asset/716aaffe-20b2-4ab3-9d83-eff6910462de.svg" alt="" width="27" height="27">
+            </span>
+            <span class="step-card__tag">STEP 02</span>
+            <h3 class="step-card__title">2. Get Your Digital Pass</h3>
+            <p class="step-card__text">Authenticate using your Swaminarayan University student email to generate an instant zero-cost encrypted dynamic QR pass.</p>
+          </li>
+
+          <li class="step-card">
+            <span class="step-card__icon step-card__icon--three">
+              <img src="https://www.figma.com/api/mcp/asset/a920a24e-fe09-4c74-ae7f-3829152d9659.svg" alt="" width="29" height="27">
+            </span>
+            <span class="step-card__tag">STEP 03</span>
+            <h3 class="step-card__title">3. Check-In &amp; Enjoy</h3>
+            <p class="step-card__text">Flash your pass at the venue entrance scanners for immediate contactless entry, free event kits, and food vouchers.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="partners">
+        <div class="partners__head">
+          <div class="partners__title-wrap">
+            <img src="https://www.figma.com/api/mcp/asset/56af0cd2-8bd1-45f9-b6d3-23376ace70d5.svg" alt="" width="20" height="19">
+            <h2 class="partners__title">PARTNERED CAMPUS SOCIETIES</h2>
+          </div>
+          <a class="partners__link" href="#">
+            <span>View all 45+ clubs</span>
+            <img src="https://www.figma.com/api/mcp/asset/46bc7348-d5fb-457d-91b1-3a3c5f03d279.svg" alt="" width="9" height="9">
+          </a>
+        </div>
+
+        <ul class="ticker">
+          <li class="club-chip">
+            <span class="club-chip__badge club-chip__badge--a">NC</span>
+            <span class="club-chip__text">
+              <span class="club-chip__name">Nexus Coding Guild</span>
+              <span class="club-chip__type">Tech &amp; Robotics</span>
+            </span>
+          </li>
+          <li class="club-chip">
+            <span class="club-chip__badge club-chip__badge--b">CC</span>
+            <span class="club-chip__text">
+              <span class="club-chip__name">SU Cultural Committee</span>
+              <span class="club-chip__type">Garba &amp; Performing Arts</span>
+            </span>
+          </li>
+          <li class="club-chip">
+            <span class="club-chip__badge club-chip__badge--c">MA</span>
+            <span class="club-chip__text">
+              <span class="club-chip__name">Music &amp; Acoustic Guild</span>
+              <span class="club-chip__type">Bands &amp; Vocalists</span>
+            </span>
+          </li>
+          <li class="club-chip">
+            <span class="club-chip__badge club-chip__badge--a">SC</span>
+            <span class="club-chip__text">
+              <span class="club-chip__name">University Sports Board</span>
+              <span class="club-chip__type">Cricket, Football &amp; Athletics</span>
+            </span>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- ===================== VIP BANNER ===================== -->
+    <section class="vip">
+      <div class="vip__box">
+        <span class="vip__glow" aria-hidden="true"></span>
+        <div class="vip__content">
+          <div class="vip__copy">
+            <span class="vip__badge">FACULTY &amp; CLUB LEADS</span>
+            <h3 class="vip__title">Hosting an event at Swaminarayan University?</h3>
+            <p class="vip__text">Publish your department symposium, sports tournament, or club workshop. Gain access to official security clearance, digital ticketing, and campus promotions.</p>
+          </div>
+          <a class="vip__btn" href="#">
+            <img src="https://www.figma.com/api/mcp/asset/10a5c302-2361-438d-91b0-3e7ea7f05a9c.svg" alt="" width="17" height="13">
+            <span>Organizer Portal</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== UPCOMING EVENTS ===================== -->
+    <section class="upcoming">
+      <div class="upcoming__head">
+        <div class="upcoming__titles">
+          <p class="upcoming__eyebrow">THE CAMPUS CALENDAR</p>
+          <h2 class="upcoming__title">Upcoming Flagship Gatherings</h2>
+        </div>
+        <p class="upcoming__text">Handpicked academic conferences, winter celebrations, and competitive tournaments scheduled this term.</p>
+      </div>
+
+      <div class="upcoming__grid">
+
+        <!-- Card 1 -->
+        <article class="event-card event-card--one">
+          <div class="event-card__top">
+            <div class="event-card__thumb">
+              <div class="event-card__img-wrap">
+                <img src="https://www.figma.com/api/mcp/asset/29801b1b-96b7-4b62-8002-cb723109bd8b.png" alt="SU-MUN 2026 conference">
+              </div>
+              <div class="event-card__shade"></div>
+              <span class="event-card__tag event-card__tag--one">Diplomatic Club</span>
+              <button class="event-card__save" type="button" aria-label="Save event">
+                <img src="https://www.figma.com/api/mcp/asset/ba885140-4a76-4a79-9d85-a3c8d836245a.svg" alt="">
+              </button>
+            </div>
+            <div class="event-card__body">
+              <p class="event-card__date">
+                <img src="https://www.figma.com/api/mcp/asset/b4e3b2a6-ff80-46a0-a50f-a86838556f22.svg" alt="" width="12" height="13">
+                <span>Oct 18, 9:00 AM</span>
+              </p>
+              <h3 class="event-card__title">SU-MUN 2026</h3>
+              <p class="event-card__desc">Model United Nations Conference debating global policy, governance,...</p>
+              <p class="event-card__place">
+                <img src="https://www.figma.com/api/mcp/asset/03908376-a66b-4d87-ac1d-c123a3b75f0b.svg" alt="" width="11" height="13">
+                <span>Central Auditorium</span>
+              </p>
+            </div>
+          </div>
+          <div class="event-card__action">
+            <a class="event-card__link" href="#">
+              <span>View Details</span>
+              <img src="https://www.figma.com/api/mcp/asset/435657de-5ebf-45c2-8864-f6a0a618c4c2.svg" alt="" width="5" height="8">
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="event-card event-card--two">
+          <div class="event-card__top">
+            <div class="event-card__thumb">
+              <div class="event-card__img-wrap">
+                <img src="https://www.figma.com/api/mcp/asset/cf280e87-ac49-43eb-aeee-2f82f0b9ce76.png" alt="Christmas Carnival">
+              </div>
+              <div class="event-card__shade"></div>
+              <span class="event-card__tag event-card__tag--two">Music &amp; Arts Society</span>
+              <button class="event-card__save" type="button" aria-label="Save event">
+                <img src="https://www.figma.com/api/mcp/asset/ba885140-4a76-4a79-9d85-a3c8d836245a.svg" alt="">
+              </button>
+            </div>
+            <div class="event-card__body">
+              <p class="event-card__date">
+                <img src="https://www.figma.com/api/mcp/asset/b4e3b2a6-ff80-46a0-a50f-a86838556f22.svg" alt="" width="12" height="13">
+                <span>Dec 24, 5:00 PM</span>
+              </p>
+              <h3 class="event-card__title">Christmas Carnival</h3>
+              <p class="event-card__desc">Winter Fest &amp; Acoustic Night with live unplugged sets, artisanal cocoa stalls,...</p>
+              <p class="event-card__place">
+                <img src="https://www.figma.com/api/mcp/asset/03908376-a66b-4d87-ac1d-c123a3b75f0b.svg" alt="" width="11" height="13">
+                <span>Student Amphitheatre</span>
+              </p>
+            </div>
+          </div>
+          <div class="event-card__action">
+            <a class="event-card__link" href="#">
+              <span>View Details</span>
+              <img src="https://www.figma.com/api/mcp/asset/435657de-5ebf-45c2-8864-f6a0a618c4c2.svg" alt="" width="5" height="8">
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="event-card event-card--three">
+          <div class="event-card__top">
+            <div class="event-card__thumb">
+              <div class="event-card__img-wrap">
+                <img src="https://www.figma.com/api/mcp/asset/3fd90d2c-90f3-4240-b133-241fed5af2f9.png" alt="New Year Bash 2026">
+              </div>
+              <div class="event-card__shade"></div>
+              <span class="event-card__tag event-card__tag--three">Student Council</span>
+              <button class="event-card__save" type="button" aria-label="Save event">
+                <img src="https://www.figma.com/api/mcp/asset/ba885140-4a76-4a79-9d85-a3c8d836245a.svg" alt="">
+              </button>
+            </div>
+            <div class="event-card__body">
+              <p class="event-card__date">
+                <img src="https://www.figma.com/api/mcp/asset/b4e3b2a6-ff80-46a0-a50f-a86838556f22.svg" alt="" width="12" height="13">
+                <span>Dec 31, 8:00 PM</span>
+              </p>
+              <h3 class="event-card__title">New Year Bash 2026</h3>
+              <p class="event-card__desc">DJ Night &amp; Midnight Countdown featuring electronic dance showcases...</p>
+              <p class="event-card__place">
+                <img src="https://www.figma.com/api/mcp/asset/03908376-a66b-4d87-ac1d-c123a3b75f0b.svg" alt="" width="11" height="13">
+                <span>Main University Lawns</span>
+              </p>
+            </div>
+          </div>
+          <div class="event-card__action">
+            <a class="event-card__link event-card__link--tall" href="#">
+              <span>View Details</span>
+              <img src="https://www.figma.com/api/mcp/asset/435657de-5ebf-45c2-8864-f6a0a618c4c2.svg" alt="" width="5" height="8">
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="event-card event-card--four">
+          <div class="event-card__top">
+            <div class="event-card__thumb">
+              <div class="event-card__img-wrap">
+                <img src="https://www.figma.com/api/mcp/asset/dc57694c-8af4-422c-93c8-2d3d4481194c.png" alt="Makar Sankranti Fest">
+              </div>
+              <div class="event-card__shade"></div>
+              <span class="event-card__tag event-card__tag--four">Cultural Committee</span>
+              <button class="event-card__save" type="button" aria-label="Save event">
+                <img src="https://www.figma.com/api/mcp/asset/ba885140-4a76-4a79-9d85-a3c8d836245a.svg" alt="">
+              </button>
+            </div>
+            <div class="event-card__body">
+              <p class="event-card__date">
+                <img src="https://www.figma.com/api/mcp/asset/b4e3b2a6-ff80-46a0-a50f-a86838556f22.svg" alt="" width="12" height="13">
+                <span>Jan 14, 10:00 AM</span>
+              </p>
+              <h3 class="event-card__title">Makar Sankranti Fest</h3>
+              <p class="event-card__desc">Kite Flying &amp; Traditional Food Mela celebrating Gujarati harvest heritage...</p>
+              <p class="event-card__place">
+                <img src="https://www.figma.com/api/mcp/asset/03908376-a66b-4d87-ac1d-c123a3b75f0b.svg" alt="" width="11" height="13">
+                <span>Sports Complex Ground</span>
+              </p>
+            </div>
+          </div>
+          <div class="event-card__action">
+            <a class="event-card__link event-card__link--square" href="#">
+              <span>View Details</span>
+              <img src="https://www.figma.com/api/mcp/asset/435657de-5ebf-45c2-8864-f6a0a618c4c2.svg" alt="" width="5" height="8">
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <div class="upcoming__more">
+        <a class="btn-gold btn-gold--more" href="#">
+          <span>View More Events</span>
+          <img src="https://www.figma.com/api/mcp/asset/28b2a5a5-9018-412d-8b19-3a404b2c664b.svg" alt="" width="12" height="12">
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer__links">
+
+      <div class="footer__col footer__col--about">
+        <a class="footer__logo" href="#" aria-label="Campus Event Hub home">
+          <img src="https://www.figma.com/api/mcp/asset/f8bbb59c-a324-44e9-8dbc-4fd00ad4f92d.png" alt="Campus Event Hub logo">
+        </a>
+        <p class="footer__about">The official cultural and academic event gateway for Swaminarayan University. Discover symposiums, hackathons, and galas in one luminous collective.</p>
+        <p class="footer__official">
+          <img src="https://www.figma.com/api/mcp/asset/2bfcce93-d1a7-46d2-a809-44ec7da24476.svg" alt="" width="16" height="16">
+          <span>Official Institutional Gateway • Kalol Campus</span>
+        </p>
+      </div>
+
+      <div class="footer__col footer__col--shortcuts">
+        <h4 class="footer__heading">Quick Shortcuts</h4>
+        <ul class="footer__list">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Explore Events</a></li>
+          <li><a href="#">My Passes &amp; Bookings</a></li>
+          <li><a href="#">Wishlist Saved</a></li>
+          <li><a href="#">Scholar Profile &amp; ID</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col footer__col--address">
+        <h4 class="footer__heading">Campus Headquarters</h4>
+        <address class="footer__address">
+          <p class="footer__address-row">
+            <img src="https://www.figma.com/api/mcp/asset/29d5c2a6-afb6-4d41-87f5-e7064de0ccb9.svg" alt="" width="16" height="16">
+            <span>Swaminarayan University Campus,<br>Ahmedabad-Mehsana Highway, At &amp; Po. Saij,<br>Kalol, Dist. Gandhinagar,<br>Gujarat – 382721</span>
+          </p>
+          <a class="footer__email" href="mailto:events@swaminarayanuniversity.ac.in">
+            <img src="https://www.figma.com/api/mcp/asset/641bbf66-64ac-4dff-89ed-ca9a0833aa7a.svg" alt="" width="14" height="14">
+            <span>events@swaminarayanuniversity.ac.in</span>
+          </a>
+        </address>
+      </div>
+
+      <div class="footer__col footer__col--news">
+        <h4 class="footer__heading footer__heading--news">STAY INFORMED</h4>
+        <p class="footer__news-text">Receive exclusive ticket invitations and gala notifications directly to your university inbox.</p>
+        <form class="subscribe" action="#" method="post">
+          <label class="visually-hidden" for="subscribe-email">University email</label>
+          <input class="subscribe__input" id="subscribe-email" type="email" name="email" placeholder="university email">
+          <button class="subscribe__btn" type="submit">Join</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__credit">Engineered &amp; Managed by <strong>RenderX Limited</strong></p>
+      <p class="footer__copy">© 2026 <strong>RenderX Limited</strong>. All rights reserved.</p>
+      <ul class="footer__legal">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Help Center</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>
