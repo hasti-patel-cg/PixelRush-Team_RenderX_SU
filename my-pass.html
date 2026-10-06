@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Events &amp; Check-In | Swaminarayan University</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@400;600;700&family=Space+Grotesk:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="my-pass.css" />
+  </head>
+  <body>
+    <!-- ========== SVG ICON SPRITE (navbar + footer icons) ========== -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <symbol id="home" viewBox="0 0 24 24">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+        <polyline points="9 22 9 12 15 12 15 22" />
+      </symbol>
+      <symbol id="checkc" viewBox="0 0 24 24">
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+        <polyline points="22 4 12 14.01 9 11.01" />
+      </symbol>
+      <symbol id="cal" viewBox="0 0 24 24">
+        <rect x="3" y="4" width="18" height="18" rx="2" />
+        <line x1="16" y1="2" x2="16" y2="6" />
+        <line x1="8" y1="2" x2="8" y2="6" />
+        <line x1="3" y1="10" x2="21" y2="10" />
+      </symbol>
+      <symbol id="ticket" viewBox="0 0 24 24">
+        <path
+          d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"
+        />
+        <path d="M13 5v2M13 11v2M13 17v2" />
+      </symbol>
+      <symbol id="search" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="8" />
+        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+      </symbol>
+      <symbol id="bell" viewBox="0 0 24 24">
+        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+        <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+      </symbol>
+      <symbol id="moon" viewBox="0 0 24 24">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+      </symbol>
+      <symbol id="shield" viewBox="0 0 24 24">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+      </symbol>
+      <symbol id="pin" viewBox="0 0 24 24">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+        <circle cx="12" cy="10" r="3" />
+      </symbol>
+      <symbol id="mail" viewBox="0 0 24 24">
+        <path
+          d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"
+        />
+        <polyline points="22,6 12,13 2,6" />
+      </symbol>
+    </svg>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <header class="navbar">
+      <a class="navbar__logo" href="index.html" aria-label="Campus Event Hub home">
+        <img
+          src="https://www.figma.com/api/mcp/asset/f8bbb59c-a324-44e9-8dbc-4fd00ad4f92d.png"
+          alt="Campus Event Hub logo"
+        />
+      </a>
+
+      <nav class="navbar__links" aria-label="Main navigation">
+        <a class="nav-pill nav-pill--home" href="index.html">
+          <svg
+            class="nav-pill__home-icon"
+            width="12"
+            height="12"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#ffffff"
+            stroke-width="2.4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M3 11.5 12 4l9 7.5" />
+            <path d="M5 10v10h14V10" />
+          </svg>
+          <span>Home</span>
+        </a>
+
+        <a class="nav-pill nav-pill--events" href="Event.html">
+          <img
+            src="https://www.figma.com/api/mcp/asset/0bf1fec1-b557-452b-96b1-70399f082330.svg"
+            alt=""
+            width="11"
+            height="11"
+          />
+          <span>Events</span>
+        </a>
+
+        <a class="nav-pill nav-pill--thanganat" href="Thanganat.html">
+          <img
+            src="https://www.figma.com/api/mcp/asset/c5a8416e-d333-48ff-80be-ed51b41cfe12.svg"
+            alt=""
+            width="10"
+            height="10"
+          />
+          <span>Thanganat 5.0</span>
+        </a>
+
+        <a class="nav-pill nav-pill--passes" href="my-pass.html">
+          <span class="nav-pill__passes-icon">
+            <img
+              src="https://www.figma.com/api/mcp/asset/21fa892d-32d7-4d3c-a2b7-bd0baba5b145.svg"
+              alt=""
+              width="17"
+              height="9"
+            />
+          </span>
+          <span>My Passes</span>
+          <span class="nav-badge nav-badge--gold">3</span>
+        </a>
+
+        <a class="nav-pill nav-pill--calendar" href="calendar.html">
+          <img
+            src="https://www.figma.com/api/mcp/asset/c6795a55-7b39-4415-9899-af556763dda8.svg"
+            alt=""
+            width="9"
+            height="10"
+          />
+          <span>Calendar</span>
+          <span class="nav-badge nav-badge--pink">2</span>
+        </a>
+      </nav>
+
+      <div class="account">
+        <div class="account__icon">
+          <button
+            class="account__icon-btn"
+            type="button"
+            aria-label="Notifications"
+          >
+            <img
+              class="account__ring"
+              src="https://www.figma.com/api/mcp/asset/41ed5562-c922-4468-8cc6-4e8ed416f29e.svg"
+              alt=""
+            />
+          </button>
+          <img
+            class="account__bell"
+            src="https://www.figma.com/api/mcp/asset/35218b5c-7b72-4729-9223-018c64f66910.svg"
+            alt=""
+          />
+          <img
+            class="account__dot"
+            src="https://www.figma.com/api/mcp/asset/e06c7608-78b2-4f12-b8c8-1ab016d8e098.svg"
+            alt=""
+          />
+        </div>
+
+        <div class="account__icon">
+          <a class="account__icon-btn" href="#" aria-label="Profile">
+            <img
+              class="account__ring"
+              src="https://www.figma.com/api/mcp/asset/e3dbbaa6-8101-4e72-b7ab-141093bbb952.svg"
+              alt=""
+            />
+          </a>
+          <span class="account__user">
+            <img
+              src="https://www.figma.com/api/mcp/asset/d389f5e0-8050-4213-903f-39bae2247bd2.svg"
+              alt=""
+            />
+          </span>
+        </div>
+
+        <div class="account__details">
+          <button class="account-card" type="button">
+            <span class="account-card__photo">
+              <img
+                src="https://www.figma.com/api/mcp/asset/fed3beb0-1df6-4b80-9ce4-539c32f1e996.png"
+                alt="Shivam Tripathi"
+                width="32"
+                height="32"
+              />
+            </span>
+            <span class="account-card__text">
+              <span class="account-card__name">Shivam Tripathi</span>
+              <span class="account-card__role">Student</span>
+            </span>
+            <span class="account-card__arrow">
+              <img
+                src="https://www.figma.com/api/mcp/asset/1c38ee90-d84a-4027-a995-aac36b9cccf6.svg"
+                alt=""
+              />
+            </span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrap page">
+      <!-- ========== PAGE HEADING ========== -->
+      <section class="page-head">
+        <div>
+          <h1 class="page-head__title">My Events &amp; Check-In</h1>
+          <p class="page-head__sub">
+            Your active digital boarding pass, upcoming reservations, and
+            session review.
+          </p>
+        </div>
+        <span class="live-chip"
+          ><span class="live-chip__dot"></span> Next Tours Gate 4 Open</span
+        >
+      </section>
+
+      <!-- ========== LIVE ARENA ACCESS ========== -->
+      <section class="live-card">
+        <div class="live-card__bar">
+          <span class="eyebrow eyebrow--gold"
+            ><i class="fa-solid fa-tower-broadcast"></i> Live Arena Access
+            &bull; Today</span
+          >
+          <span class="live-card__ref">Pass: ABC-1234</span>
+        </div>
+
+        <div class="live-card__body">
+          <div class="live-card__info">
+            <span class="tag-green"
+              ><i class="fa-solid fa-circle-check"></i> Confirmed &bull; VIP
+              Entry Pass</span
+            >
+            <h2 class="live-card__title">Thanganat 5.0</h2>
+            <p class="live-card__sub">
+              Kalinchi Outdoor Mahotsav &amp; Grand Garba Night
+            </p>
+
+            <div class="mini-info">
+              <div>
+                <p class="eyebrow">Date &amp; Time</p>
+                <p class="mini-info__main">Today, Oct 4</p>
+                <p class="mini-info__sub">07:00 PM &bull; Gate Open</p>
+              </div>
+              <div>
+                <p class="eyebrow">Venue &amp; Gate</p>
+                <p class="mini-info__main">New Cricket Ground</p>
+                <p class="mini-info__sub">VIP Gate 2 Turnstile</p>
+              </div>
+            </div>
+
+            <p class="live-card__hint">
+              <i class="fa-regular fa-clock"></i> Present this QR code at
+              <b>Fast Track VIP Gate 5</b> for direct turnstile access.
+            </p>
+
+            <div class="btn-row">
+              <button type="button" class="btn-sm btn-sm--lg btn-sm--gold">
+                <i class="fa-solid fa-ticket"></i> View Pass
+              </button>
+              <button type="button" class="btn-sm btn-sm--lg">
+                <i class="fa-regular fa-map"></i> View on Map
+              </button>
+            </div>
+          </div>
+
+          <aside class="terminal">
+            <p class="eyebrow">Instant Terminal Entry</p>
+            <div class="qr">
+              <img
+                class="qr__img"
+                src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=BS-7143-3688-02"
+                alt="QR code for pass BS-7143-3688-02"
+              />
+              <span class="qr__logo">DP</span>
+            </div>
+            <p class="terminal__code">BS-7143-3688-02</p>
+            <p class="terminal__note">
+              Dynamic token refreshes every 30 seconds
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ========== UPCOMING EVENTS ========== -->
+      <section class="block">
+        <div class="block__head">
+          <h3 class="block__title">
+            <i class="fa-regular fa-calendar-days"></i> Upcoming Events
+          </h3>
+          <a class="block__link" href="#"
+            >Explore Events Calendar <i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </div>
+
+        <article class="event-row">
+          <div class="event-row__left">
+            <div class="date-box">
+              <small>OCT</small>
+              <b>05</b>
+              <small>SAT</small>
+            </div>
+            <div>
+              <p class="event-row__tags">
+                <span class="chip chip--gold">Fri/Sat</span>
+                <span class="chip chip--green">Confirmed</span>
+              </p>
+              <h4 class="event-row__title">
+                Executive AI &amp; Cloud Forum 2026
+              </h4>
+              <p class="event-row__sub">
+                Main Auditorium &bull; 10:00 AM &bull; Tech Block
+              </p>
+            </div>
+          </div>
+          <div class="btn-row">
+            <button type="button" class="btn-sm">
+              <i class="fa-regular fa-calendar-check"></i> Sync Calendar
+            </button>
+            <button type="button" class="btn-sm btn-sm--gold">
+              View Booking <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </article>
+      </section>
+
+      <!-- ========== EVENT TIMELINE ========== -->
+      <section class="block">
+        <div class="block__head">
+          <h3 class="block__title">
+            <i class="fa-solid fa-clock-rotate-left"></i> Event Timeline &amp;
+            Artist Lineup
+          </h3>
+          <span class="block__note">Schedule subject to arrival changes</span>
+        </div>
+
+        <ul class="timeline">
+          <li class="tl-row">
+            <span class="icon-box"><i class="fa-solid fa-door-open"></i></span>
+            <div class="tl-row__text">
+              <p class="tl-row__title">
+                Priority Gates Open &amp; VIP Lounge Welcome
+              </p>
+              <p class="tl-row__sub">
+                Exclusive welcome drinks, certificate for attendees and
+                photobooth.
+              </p>
+            </div>
+            <span class="time-chip time-chip--gold">05:30 PM</span>
+          </li>
+          <li class="tl-row">
+            <span class="icon-box"><i class="fa-solid fa-fire"></i></span>
+            <div class="tl-row__text">
+              <p class="tl-row__title">
+                Grand Maha Aarti &amp; Traditional Stuti
+              </p>
+              <p class="tl-row__sub">
+                Ceremonial lighting led by distinguished university dignitaries.
+              </p>
+            </div>
+            <span class="time-chip">06:30 PM</span>
+          </li>
+          <li class="tl-row">
+            <span class="icon-box"><i class="fa-solid fa-music"></i></span>
+            <div class="tl-row__text">
+              <p class="tl-row__title">
+                Traditional Ras-Garba featuring Live Folk Orchestra
+              </p>
+              <p class="tl-row__sub">
+                Authentic 3-beat, 6-beat and 8-beat Garba rhythms.
+              </p>
+            </div>
+            <span class="time-chip">08:15 PM</span>
+          </li>
+          <li class="tl-row">
+            <span class="icon-box"><i class="fa-solid fa-drum"></i></span>
+            <div class="tl-row__text">
+              <p class="tl-row__title">
+                Sanedo &amp; Fusion Dhol Symphony Beats
+              </p>
+              <p class="tl-row__sub">
+                High-voltage fusion music, dance floor and live DJ finale.
+              </p>
+            </div>
+            <span class="time-chip">11:30 PM</span>
+          </li>
+          <li class="tl-row">
+            <span class="icon-box"><i class="fa-solid fa-trophy"></i></span>
+            <div class="tl-row__text">
+              <p class="tl-row__title">
+                Awards Ceremony &amp; Event Conclusion
+              </p>
+              <p class="tl-row__sub">
+                Best Dressed &amp; Best Garba awards distribution, midnight
+                farewell.
+              </p>
+            </div>
+            <span class="time-chip">12:30 AM</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ========== VENUE AMENITIES ========== -->
+      <section class="block">
+        <div class="block__head">
+          <h3 class="block__title">
+            <i class="fa-solid fa-location-dot"></i> Venue Amenities &amp; Entry
+            Essentials
+          </h3>
+          <a class="block__link" href="#">Complete Guide at Gate</a>
+        </div>
+
+        <div class="amenities">
+          <article class="amenity">
+            <span class="icon-box"><i class="fa-solid fa-car"></i></span>
+            <h4 class="amenity__title">VIP Valet &amp; Parking</h4>
+            <p class="amenity__text">
+              Reserved Slot: 17. Parking entry via North Gate, valet handover at
+              Gate 4 drop-off lane.
+            </p>
+            <p class="amenity__foot">
+              <span>Location</span><b>Gate 4 Drop-off</b>
+            </p>
+          </article>
+          <article class="amenity">
+            <span class="icon-box"><i class="fa-solid fa-utensils"></i></span>
+            <h4 class="amenity__title">Food &amp; Beverage Pavilion</h4>
+            <p class="amenity__text">
+              Authentic Kathiyawadi thali, snacks and beverage stalls available
+              all evening.
+            </p>
+            <p class="amenity__foot">
+              <span>Coupons</span><b>Counters &bull; Main Crowd</b>
+            </p>
+          </article>
+          <article class="amenity">
+            <span class="icon-box"><i class="fa-solid fa-shirt"></i></span>
+            <h4 class="amenity__title">Dress Code &amp; Security</h4>
+            <p class="amenity__text">
+              Traditional attire required. Chaniya Choli / Kedia Kurta. Bags are
+              scanned at entry.
+            </p>
+            <p class="amenity__foot">
+              <span>Pre-check</span><b class="amenity__warn">RFID Required</b>
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ========== PAST PASSES ========== -->
+      <section class="block">
+        <div class="block__head">
+          <h3 class="block__title">
+            <i class="fa-solid fa-certificate"></i> Past Passes &amp;
+            Certificates (Thanganat Archives)
+          </h3>
+          <span class="block__note">2 events attended</span>
+        </div>
+
+        <div class="archive">
+          <article class="archive-card">
+            <div class="archive-card__top">
+              <div class="archive-card__who">
+                <span class="icon-box"><i class="fa-solid fa-ticket"></i></span>
+                <div>
+                  <h4 class="archive-card__title">Thanganat 4.0</h4>
+                  <p class="archive-card__sub">
+                    Oct 15, 2023 &bull; VIP Circle
+                  </p>
+                </div>
+              </div>
+              <span class="chip chip--green">Attended</span>
+            </div>
+            <div class="archive-card__foot">
+              <span class="archive-card__id">Cert #7743-4219</span>
+              <div class="btn-row">
+                <button type="button" class="btn-sm">
+                  <i class="fa-regular fa-image"></i> Gallery
+                </button>
+                <button type="button" class="btn-sm btn-sm--soft">
+                  <i class="fa-solid fa-award"></i> Certificate
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="archive-card">
+            <div class="archive-card__top">
+              <div class="archive-card__who">
+                <span class="icon-box"><i class="fa-solid fa-ticket"></i></span>
+                <div>
+                  <h4 class="archive-card__title">Thanganat 3.0</h4>
+                  <p class="archive-card__sub">
+                    Oct 12, 2022 &bull; Patron Pass
+                  </p>
+                </div>
+              </div>
+              <span class="chip chip--green">Attended</span>
+            </div>
+            <div class="archive-card__foot">
+              <span class="archive-card__id">Cert #7743-4219</span>
+              <div class="btn-row">
+                <button type="button" class="btn-sm">
+                  <i class="fa-regular fa-image"></i> Gallery
+                </button>
+                <button type="button" class="btn-sm btn-sm--soft">
+                  <i class="fa-solid fa-award"></i> Certificate
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ========== FEEDBACK ========== -->
+      <section class="feedback">
+        <div>
+          <p class="eyebrow">
+            Rate Your Feedback <span class="chip chip--gold">Required</span>
+          </p>
+          <p class="feedback__q">
+            How was your experience at Thanganat 4.0 / Pre-event?
+          </p>
+        </div>
+        <div class="feedback__right">
+          <div class="stars" aria-label="Rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <button type="button" class="btn-sm btn-sm--lg btn-sm--gold">
+            Submit Review <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+      <div class="wrap">
+        <div class="f-grid">
+          <div>
+            <a href="#"
+              ><img
+                class="logo-img sm"
+                alt="Logo"
+                src="https://www.figma.com/api/mcp/asset/f8bbb59c-a324-44e9-8dbc-4fd00ad4f92d.png"
+            /></a>
+            <p class="f-about">
+              The official cultural and academic event gateway for Swaminarayan
+              University. Discover symposiums, hackathons, and galas in one
+              luminous collective.
+            </p>
+            <span class="f-badge">
+              <svg class="i"><use href="#shield" /></svg>
+              Official Institutional Gateway &bull; Kalol Campus
+            </span>
+          </div>
+
+          <div>
+            <h6>Quick Shortcuts</h6>
+            <ul>
+              <li>Home</li>
+              <li>Explore Events</li>
+              <li>My Passes &amp; Bookings</li>
+              <li>Wishlist Saved</li>
+              <li>Scholar Profile &amp; ID</li>
+            </ul>
+          </div>
+
+          <div>
+            <h6>Campus Headquarters</h6>
+            <p class="addr">
+              <svg class="i"><use href="#pin" /></svg>
+              <span
+                >Swaminarayan University Campus, Ahmedabad-Mehsana Highway, At
+                &amp; Po. Saij, Kalol, Dist. Gandhinagar, Gujarat - 382721</span
+              >
+            </p>
+            <a class="mail" href="mailto:events@swaminarayanuniversity.in">
+              <svg class="i"><use href="#mail" /></svg>
+              events@swaminarayanuniversity.in
+            </a>
+          </div>
+
+          <div>
+            <h6>Stay Informed</h6>
+            <p>
+              Receive exclusive ticket invitations and gala notifications
+              directly to your inbox.
+            </p>
+            <div class="sub">
+              <input type="email" placeholder="university email" />
+              <button type="button">JOIN</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="copy">
+          <span>Engineered &amp; Managed by <b>RenderX Limited</b></span>
+          <span>&copy; 2026 <b>RenderX Limited</b>. All rights reserved.</span>
+          <nav>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Help Center</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

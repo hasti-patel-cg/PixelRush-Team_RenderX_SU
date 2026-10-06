@@ -1,0 +1,960 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Explore All Campus Events</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@400;600;700&family=Space+Grotesk:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="event.css" />
+  </head>
+  <body>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="0"
+      height="0"
+      style="position: absolute"
+      aria-hidden="true"
+    >
+      <symbol id="search" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="8" />
+        <path d="m21 21-4.3-4.3" />
+      </symbol>
+      <symbol id="home" viewBox="0 0 24 24">
+        <path
+          d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"
+        />
+      </symbol>
+      <symbol id="checkc" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" />
+        <path d="m8 12 3 3 5-6" />
+      </symbol>
+      <symbol id="cal" viewBox="0 0 24 24">
+        <rect x="3" y="4" width="18" height="18" rx="2" />
+        <path d="M16 2v4M8 2v4M3 10h18" />
+      </symbol>
+      <symbol id="ticket" viewBox="0 0 24 24">
+        <path
+          d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"
+        />
+        <path d="M13 5v2M13 11v2M13 17v2" />
+      </symbol>
+      <symbol id="bell" viewBox="0 0 24 24">
+        <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
+        <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+      </symbol>
+      <symbol id="moon" viewBox="0 0 24 24">
+        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+      </symbol>
+      <symbol id="sliders" viewBox="0 0 24 24">
+        <path
+          d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"
+        />
+      </symbol>
+      <symbol id="reset" viewBox="0 0 24 24">
+        <path d="M3 12a9 9 0 1 0 3-6.7L3 8" />
+        <path d="M3 3v5h5" />
+      </symbol>
+      <symbol id="layers" viewBox="0 0 24 24">
+        <path d="m12 2 10 5-10 5L2 7z" />
+        <path d="m2 12 10 5 10-5M2 17l10 5 10-5" />
+      </symbol>
+      <symbol id="palette" viewBox="0 0 24 24">
+        <circle cx="13.5" cy="6.5" r=".6" />
+        <circle cx="17.5" cy="10.5" r=".6" />
+        <circle cx="8.5" cy="7.5" r=".6" />
+        <circle cx="6.5" cy="12.5" r=".6" />
+        <path
+          d="M12 2a10 10 0 0 0 0 20 2 2 0 0 0 2-2c0-.6-.2-1-.5-1.4s-.5-.8-.5-1.4a2 2 0 0 1 2-2h2a6 6 0 0 0 6-6c0-5-4.5-7.2-10-7.2Z"
+        />
+      </symbol>
+      <symbol id="monitor" viewBox="0 0 24 24">
+        <rect x="2" y="3" width="20" height="14" rx="2" />
+        <path d="M8 21h8M12 17v4" />
+      </symbol>
+      <symbol id="gamepad" viewBox="0 0 24 24">
+        <path d="M6 12h4M8 10v4M15 13h.01M18 11h.01" />
+        <rect x="2" y="6" width="20" height="12" rx="4" />
+      </symbol>
+      <symbol id="present" viewBox="0 0 24 24">
+        <path
+          d="M2 3h20M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3M7 21l5-5 5 5"
+        />
+      </symbol>
+      <symbol id="heart" viewBox="0 0 24 24">
+        <path
+          d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7Z"
+        />
+      </symbol>
+      <symbol id="pin" viewBox="0 0 24 24">
+        <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0" />
+        <circle cx="12" cy="10" r="3" />
+      </symbol>
+      <symbol id="users" viewBox="0 0 24 24">
+        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8" />
+      </symbol>
+      <symbol id="userplus" viewBox="0 0 24 24">
+        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M19 8v6M22 11h-6" />
+      </symbol>
+      <symbol id="nav" viewBox="0 0 24 24">
+        <path d="m3 11 19-9-9 19-2-8z" />
+      </symbol>
+      <symbol id="food" viewBox="0 0 24 24">
+        <path
+          d="M3 2v7a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V2M6 2v20M21 15V2a5 5 0 0 0-5 5v6a2 2 0 0 0 2 2zm0 0v7"
+        />
+      </symbol>
+      <symbol id="camera" viewBox="0 0 24 24">
+        <path
+          d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3z"
+        />
+        <circle cx="12" cy="13" r="3" />
+      </symbol>
+      <symbol id="radio" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="2" />
+        <path
+          d="M16.2 7.8a6 6 0 0 1 0 8.4M7.8 16.2a6 6 0 0 1 0-8.4M19.1 4.9a10 10 0 0 1 0 14.2M4.9 19.1a10 10 0 0 1 0-14.2"
+        />
+      </symbol>
+      <symbol id="clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" />
+        <path d="M12 6v6l4 2" />
+      </symbol>
+      <symbol id="music" viewBox="0 0 24 24">
+        <path d="M9 18V5l12-2v13" />
+        <circle cx="6" cy="18" r="3" />
+        <circle cx="18" cy="16" r="3" />
+      </symbol>
+      <symbol id="plusc" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" />
+        <path d="M8 12h8M12 8v8" />
+      </symbol>
+      <symbol id="history" viewBox="0 0 24 24">
+        <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+        <path d="M3 3v5h5M12 7v5l4 2" />
+      </symbol>
+      <symbol id="image" viewBox="0 0 24 24">
+        <rect x="3" y="3" width="18" height="18" rx="2" />
+        <circle cx="9" cy="9" r="2" />
+        <path d="m21 15-3.1-3.1a2 2 0 0 0-2.8 0L6 21" />
+      </symbol>
+      <symbol id="trophy" viewBox="0 0 24 24">
+        <path
+          d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.7V17c0 .6-.5 1-1.1 1.2C7.8 18.7 7 20.2 7 22M14 14.7V17c0 .6.5 1 1.1 1.2 1.1.5 1.9 2 1.9 3.8M18 2H6v7a6 6 0 0 0 12 0z"
+        />
+      </symbol>
+      <symbol id="award" viewBox="0 0 24 24">
+        <circle cx="12" cy="8" r="6" />
+        <path d="M15.5 13 17 22l-5-3-5 3 1.5-9" />
+      </symbol>
+      <symbol id="download" viewBox="0 0 24 24">
+        <path
+          d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"
+        />
+      </symbol>
+      <symbol id="pen" viewBox="0 0 24 24">
+        <path d="M17 3a2.8 2.8 0 0 1 4 4L7.5 20.5 2 22l1.5-5.5z" />
+      </symbol>
+      <symbol id="arrow" viewBox="0 0 24 24">
+        <path d="M5 12h14M12 5l7 7-7 7" />
+      </symbol>
+      <symbol id="down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" /></symbol>
+      <symbol id="shield" viewBox="0 0 24 24">
+        <path
+          d="M20 13c0 5-3.5 7.5-7.7 8.9a1 1 0 0 1-.6 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.7a1.2 1.2 0 0 1 1.5 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"
+        />
+        <path d="m9 12 2 2 4-4" />
+      </symbol>
+      <symbol id="mail" viewBox="0 0 24 24">
+        <rect x="2" y="4" width="20" height="16" rx="2" />
+        <path d="m22 7-10 6L2 7" />
+      </symbol>
+      <symbol id="x" viewBox="0 0 24 24">
+        <path d="M18 6 6 18M6 6l12 12" />
+      </symbol>
+    </svg>
+    <!-- NAVBAR -->
+        <!-- ===================== NAVBAR ===================== -->
+    <header class="navbar">
+      <a class="navbar__logo" href="index.html" aria-label="Campus Event Hub home">
+        <img
+          src="https://www.figma.com/api/mcp/asset/f8bbb59c-a324-44e9-8dbc-4fd00ad4f92d.png"
+          alt="Campus Event Hub logo"
+        />
+      </a>
+
+      <nav class="navbar__links" aria-label="Main navigation">
+        <a class="nav-pill nav-pill--home" href="index.html">
+          <svg
+            class="nav-pill__home-icon"
+            width="12"
+            height="12"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#ffffff"
+            stroke-width="2.4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M3 11.5 12 4l9 7.5" />
+            <path d="M5 10v10h14V10" />
+          </svg>
+          <span>Home</span>
+        </a>
+
+        <a class="nav-pill nav-pill--events" href="Event.html">
+          <img
+            src="https://www.figma.com/api/mcp/asset/0bf1fec1-b557-452b-96b1-70399f082330.svg"
+            alt=""
+            width="11"
+            height="11"
+          />
+          <span>Events</span>
+        </a>
+
+        <a class="nav-pill nav-pill--thanganat" href="Thanganat.html">
+          <img
+            src="https://www.figma.com/api/mcp/asset/c5a8416e-d333-48ff-80be-ed51b41cfe12.svg"
+            alt=""
+            width="10"
+            height="10"
+          />
+          <span>Thanganat 5.0</span>
+        </a>
+
+        <a class="nav-pill nav-pill--passes" href="my-pass.html">
+          <span class="nav-pill__passes-icon">
+            <img
+              src="https://www.figma.com/api/mcp/asset/21fa892d-32d7-4d3c-a2b7-bd0baba5b145.svg"
+              alt=""
+              width="17"
+              height="9"
+            />
+          </span>
+          <span>My Passes</span>
+          <span class="nav-badge nav-badge--gold">3</span>
+        </a>
+
+        <a class="nav-pill nav-pill--calendar" href="calendar.html">
+          <img
+            src="https://www.figma.com/api/mcp/asset/c6795a55-7b39-4415-9899-af556763dda8.svg"
+            alt=""
+            width="9"
+            height="10"
+          />
+          <span>Calendar</span>
+          <span class="nav-badge nav-badge--pink">2</span>
+        </a>
+      </nav>
+
+      <div class="account">
+        <div class="account__icon">
+          <button
+            class="account__icon-btn"
+            type="button"
+            aria-label="Notifications"
+          >
+            <img
+              class="account__ring"
+              src="https://www.figma.com/api/mcp/asset/41ed5562-c922-4468-8cc6-4e8ed416f29e.svg"
+              alt=""
+            />
+          </button>
+          <img
+            class="account__bell"
+            src="https://www.figma.com/api/mcp/asset/35218b5c-7b72-4729-9223-018c64f66910.svg"
+            alt=""
+          />
+          <img
+            class="account__dot"
+            src="https://www.figma.com/api/mcp/asset/e06c7608-78b2-4f12-b8c8-1ab016d8e098.svg"
+            alt=""
+          />
+        </div>
+
+        <div class="account__icon">
+          <a class="account__icon-btn" href="#" aria-label="Profile">
+            <img
+              class="account__ring"
+              src="https://www.figma.com/api/mcp/asset/e3dbbaa6-8101-4e72-b7ab-141093bbb952.svg"
+              alt=""
+            />
+          </a>
+          <span class="account__user">
+            <img
+              src="https://www.figma.com/api/mcp/asset/d389f5e0-8050-4213-903f-39bae2247bd2.svg"
+              alt=""
+            />
+          </span>
+        </div>
+
+        <div class="account__details">
+          <button class="account-card" type="button">
+            <span class="account-card__photo">
+              <img
+                src="https://www.figma.com/api/mcp/asset/fed3beb0-1df6-4b80-9ce4-539c32f1e996.png"
+                alt="Shivam Tripathi"
+                width="32"
+                height="32"
+              />
+            </span>
+            <span class="account-card__text">
+              <span class="account-card__name">Shivam Tripathi</span>
+              <span class="account-card__role">Student</span>
+            </span>
+            <span class="account-card__arrow">
+              <img
+                src="https://www.figma.com/api/mcp/asset/1c38ee90-d84a-4027-a995-aac36b9cccf6.svg"
+                alt=""
+              />
+            </span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="wrap">
+
+      <!-- HERO -->
+      <section class="hero">
+        <div>
+          <h1>Explore All <em>Campus Events</em></h1>
+          <p>
+            Find clubs, technical hackathons, cultural fests, workshops, and
+            sports tournaments across Swaminarayan University.
+          </p>
+        </div>
+        <div class="search">
+          <div class="search-box">
+            <svg class="i"><use href="#search" /></svg>
+            <div class="field">
+              <input
+                id="q"
+                type="text"
+                placeholder="Search by fest, club, hall..."
+                autocomplete="off"
+                aria-label="Search events"
+              />
+            </div>
+          </div>
+          <div class="drop">
+            <h6>Popular searches</h6>
+            <div class="quick">
+              <a href="#hack">Hackathon</a><a href="#feature">Garba</a
+              ><a href="#cricket">Cricket</a><a href="#bootcamp">Workshop</a
+              ><a href="#robo">Robotics</a>
+            </div>
+            <h6>Jump to event</h6>
+            <a class="res" href="#feature"
+              ><span class="ic"
+                ><svg class="i"><use href="#music" /></svg></span
+              ><span
+                ><b>Thanganat 5.0 — Live Garba Celebration</b
+                ><small>Happening now • Central Grounds</small></span
+              ></a
+            >
+            <a class="res" href="#hack"
+              ><span class="ic"
+                ><svg class="i"><use href="#cal" /></svg></span
+              ><span
+                ><b>HackSU: 36-Hr Campus Hackathon</b
+                ><small>Oct 18 • Tech &amp; Coding</small></span
+              ></a
+            >
+            <a class="res" href="#robo"
+              ><span class="ic"
+                ><svg class="i"><use href="#cal" /></svg></span
+              ><span
+                ><b>RoboWar Arena 2025</b
+                ><small>Oct 22 • Tech &amp; Coding</small></span
+              ></a
+            >
+            <a class="res" href="#cricket"
+              ><span class="ic"
+                ><svg class="i"><use href="#cal" /></svg></span
+              ><span
+                ><b>Inter-College Cricket Premier League</b
+                ><small>Oct 26 • Sports &amp; E-Sports</small></span
+              ></a
+            >
+            <a class="res" href="#bootcamp"
+              ><span class="ic"
+                ><svg class="i"><use href="#cal" /></svg></span
+              ><span
+                ><b>AI &amp; Machine Learning Bootcamp</b
+                ><small>Nov 04 • Workshops &amp; Seminars</small></span
+              ></a
+            >
+            <a class="res" href="#archive"
+              ><span class="ic"
+                ><svg class="i"><use href="#history" /></svg></span
+              ><span
+                ><b>Events Concluded</b><small>Historical archives</small></span
+              ></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- FILTER PANEL -->
+      <section class="panel">
+        <div class="panel-top">
+          <div class="panel-title">
+            <span class="ico"
+              ><svg class="i"><use href="#sliders" /></svg></span>
+            <div>
+              <b>Event Intelligence &amp; Filters</b
+              ><small
+                >Pinpoint gatherings by mode, access pricing, venue distance,
+                and real-time seat availability</small
+              >
+            </div>
+          </div>
+          <div style="display: flex; gap: 8px">
+            <span class="tag"
+              ><svg class="i"><use href="#checkc" /></svg>Live Syncing</span
+            ><span class="tag grey"
+              ><svg class="i"><use href="#reset" /></svg>Reset</span
+            >
+          </div>
+        </div>
+
+        <div class="lbl">
+          <svg class="i"><use href="#layers" /></svg>Category
+        </div>
+        <div class="chips">
+          <span class="chip on">All <span class="n">24</span></span>
+          <span class="chip"
+            ><svg class="i"><use href="#palette" /></svg>Cultural &amp; Arts
+            <span class="n">6</span></span
+          >
+          <span class="chip"
+            ><svg class="i"><use href="#monitor" /></svg>Tech &amp; Coding
+            <span class="n">7</span></span
+          >
+          <span class="chip"
+            ><svg class="i"><use href="#gamepad" /></svg>Sports &amp; E-Sports
+            <span class="n">5</span></span
+          >
+          <span class="chip"
+            ><svg class="i"><use href="#present" /></svg>Workshops &amp;
+            Seminars <span class="n">4</span></span
+          >
+          <span class="chip"
+            ><svg class="i"><use href="#heart" /></svg>Social &amp; Non-Profit
+            <span class="n">2</span></span
+          >
+        </div>
+
+        <div class="row3">
+          <div>
+            <div class="lbl">
+              <svg class="i"><use href="#cal" /></svg>Schedule &amp; Date
+            </div>
+            <div class="seg">
+              <span class="on">All Upcoming</span><span>Weekend</span
+              ><span
+                >This Month <svg class="i"><use href="#cal" /></svg
+              ></span>
+            </div>
+          </div>
+          <div>
+            <div class="lbl">
+              <svg class="i"><use href="#ticket" /></svg>Admission Access
+            </div>
+            <div class="seg">
+              <span class="on">All</span><span>Free Access</span
+              ><span>Pass / Ticket</span>
+            </div>
+          </div>
+          <div>
+            <div class="lbl">
+              <svg class="i"><use href="#pin" /></svg>Format &amp; Mode
+            </div>
+            <div class="seg">
+              <span class="on">All</span><span>On-Campus</span
+              ><span>Virtual / Hybrid</span>
+            </div>
+          </div>
+          <div>
+            <div class="lbl">
+              <svg class="i"><use href="#users" /></svg>Seat Capacity
+            </div>
+            <div class="seg">
+              <span class="on">All</span><span>Available</span
+              ><span>&lt;10% Fast</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="foot">
+          <div class="rad">
+            <svg class="i"><use href="#nav" /></svg>Radius:
+            <div class="seg">
+              <span class="on">Entire Campus</span><span>Within 500m</span
+              ><span>Within 1km</span><span>Inter-College</span>
+            </div>
+          </div>
+          <div class="active">
+            Active Tags:
+            <span class="tag"
+              >All Events <svg class="i"><use href="#x" /></svg></span
+            ><span class="tag"
+              >All Venues <svg class="i"><use href="#x" /></svg></span
+            ><span class="tag grey">Showing 24 Verified Gatherings</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURED EVENT -->
+      <section class="feature" id="feature">
+        <div class="f-img">
+          <span class="badge-live"><i></i>HAPPENING NOW • DAY 2 OF 3</span>
+          <img
+            src="https://picsum.photos/seed/garba/900/600"
+            alt="Garba celebration"
+          />
+          <div class="stage">
+            <span class="n"
+              ><svg class="i"><use href="#music" /></svg
+            ></span>
+            <div>
+              <small>LIVE ON STAGE</small
+              ><b>DJ Parth &amp; Troupe Performing</b>
+            </div>
+          </div>
+        </div>
+        <div class="f-body">
+          <div class="f-top">
+            <span class="tag">Cultural Mega Festival</span
+            ><span class="tag w"
+              ><svg class="i"><use href="#users" /></svg>2,450 Attending</span
+            >
+          </div>
+          <h2>Thanganat 5.0 — <em>Live Garba Celebration</em></h2>
+          <p>
+            Experience the thunderous beats of Dhol and authentic Ras-Garba
+            under the stars. Mandatory traditional Kedia and Chaniya Choli
+            attire. Gate entry valid only via RFID student wristbands.
+          </p>
+          <div class="info">
+            <div>
+              <small
+                ><svg class="i"><use href="#pin" /></svg>Venue</small
+              ><b>Central Grounds</b>
+            </div>
+            <div>
+              <small
+                ><svg class="i"><use href="#food" /></svg>Food Street</small
+              ><b>32 Kathiyawadi Stalls</b>
+            </div>
+          </div>
+          <div class="btns">
+            <a class="btn btn-primary" href="registration.html"
+              ><svg class="i"><use href="#camera" /></svg>Resister Now</a
+            >
+            <button class="btn btn-ghost">
+              <svg class="i"><use href="#radio" /></svg>Live Updates
+            </button>
+            <button class="btn btn-ghost">
+              <svg class="i"><use href="#clock" /></svg>Schedule
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- UPCOMING -->
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">Mark your calendars</div>
+          <h3>Upcoming <em>University Gatherings</em></h3>
+        </div>
+        <small>Showing active curated campus fixtures</small>
+      </div>
+      <section class="grid2">
+        <article class="card" id="hack">
+          <div class="c-img">
+            <img src="https://picsum.photos/seed/hack/700/400" alt="" /><span
+              class="date"
+              >OCT<b>18</b></span
+            ><span class="cat">Tech &amp; Coding</span>
+          </div>
+          <div class="c-body">
+            <h4>HackSU: 36-Hr Campus Hackathon</h4>
+            <p>
+              Join 500+ student developers solving AI, Web3, and HealthTech
+              challenges. Includes overnight lodging, complimentary energy bars,
+              and mentors.
+            </p>
+            <div class="meta">
+              <span
+                ><svg class="i"><use href="#pin" /></svg>Engineering Block 3 •
+                Mega Turing Lab</span
+              ><span
+                ><svg class="i"><use href="#clock" /></svg>Oct 18, 08:00 AM –
+                Oct 19, 08:00 PM</span
+              ><span
+                ><svg class="i"><use href="#checkc" /></svg>Hosted by Developer
+                Student Club • Guest: CTO, Infotech Labs</span
+              >
+            </div>
+            <div class="c-foot">
+              <b
+                ><svg class="i"><use href="#userplus" /></svg>+312 attending</b
+              ><button class="rsvp">
+                <svg class="i"><use href="#plusc" /></svg>RSVP / Attend
+              </button>
+            </div>
+          </div>
+        </article>
+        <article class="card" id="robo">
+          <div class="c-img">
+            <img src="https://picsum.photos/seed/robot/700/400" alt="" /><span
+              class="date"
+              >OCT<b>22</b></span
+            ><span class="cat">Tech &amp; Coding</span>
+          </div>
+          <div class="c-body">
+            <h4>RoboWar Arena 2025</h4>
+            <p>
+              Heavyweight 30kg combat bots battle in a high-tensile bulletproof
+              arena. Dual wedge spinners, flippers, and pneumatic hammers go
+              head-to-head.
+            </p>
+            <div class="meta">
+              <span
+                ><svg class="i"><use href="#pin" /></svg>Mechanical Workshop
+                Complex • Ring B</span
+              ><span
+                ><svg class="i"><use href="#clock" /></svg>Oct 22, 10:00 AM –
+                05:30 PM</span
+              ><span
+                ><svg class="i"><use href="#checkc" /></svg>Robotics Syndicate •
+                Judged by ISRO Veteran Mentors</span
+              >
+            </div>
+            <div class="c-foot">
+              <b
+                ><svg class="i"><use href="#userplus" /></svg>+194 attending</b
+              ><button class="rsvp">
+                <svg class="i"><use href="#plusc" /></svg>RSVP / Attend
+              </button>
+            </div>
+          </div>
+        </article>
+        <article class="card" id="cricket">
+          <div class="c-img">
+            <img src="https://picsum.photos/seed/cricket/700/400" alt="" /><span
+              class="date"
+              >OCT<b>26</b></span
+            ><span class="cat">Sports &amp; E-Sports</span>
+          </div>
+          <div class="c-body">
+            <h4>Inter-College Cricket Premier League</h4>
+            <p>
+              The flagship 16-over night tournament between 12 departments. Live
+              DJ commentary, LED bails, electronic scoreboard, and cash purse of
+              ₹1 lakh.
+            </p>
+            <div class="meta">
+              <span
+                ><svg class="i"><use href="#pin" /></svg>Main Sports Pavilion •
+                Floodlight Cricket Oval</span
+              ><span
+                ><svg class="i"><use href="#clock" /></svg>Oct 26 – Nov 02,
+                06:00 PM Daily</span
+              ><span
+                ><svg class="i"><use href="#checkc" /></svg>SU Athletics Board •
+                Chief Guest: Ranji Trophy Player</span
+              >
+            </div>
+            <div class="c-foot">
+              <b
+                ><svg class="i"><use href="#userplus" /></svg>+480 attending</b
+              ><button class="rsvp">
+                <svg class="i"><use href="#plusc" /></svg>RSVP / Attend
+              </button>
+            </div>
+          </div>
+        </article>
+        <article class="card" id="bootcamp">
+          <div class="c-img">
+            <img
+              src="https://picsum.photos/seed/bootcamp/700/400"
+              alt=""
+            /><span class="date">NOV<b>04</b></span
+            ><span class="cat">Workshops &amp; Seminars</span>
+          </div>
+          <div class="c-body">
+            <h4>AI &amp; Machine Learning Bootcamp</h4>
+            <p>
+              Hands-on immersion in LLM fine-tuning, retrieval-augmented
+              generation (RAG), and computer vision. Includes cloud GPU compute
+              credits and a certificate.
+            </p>
+            <div class="meta">
+              <span
+                ><svg class="i"><use href="#pin" /></svg>Ramanujan Auditorium •
+                Hall A</span
+              ><span
+                ><svg class="i"><use href="#clock" /></svg>Nov 04 – Nov 05,
+                09:30 AM – 04:30 PM</span
+              ><span
+                ><svg class="i"><use href="#checkc" /></svg>Dept. of Computer
+                Engineering • Lead Researcher, Nvidia</span
+              >
+            </div>
+            <div class="c-foot">
+              <b
+                ><svg class="i"><use href="#userplus" /></svg>+228 attending</b
+              ><button class="rsvp">
+                <svg class="i"><use href="#plusc" /></svg>RSVP / Attend
+              </button>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- CONCLUDED -->
+      <section class="arch" id="archive">
+        <span class="tag"
+          ><svg class="i"><use href="#history" /></svg>Historical Archives</span
+        >
+        <div class="sec-head" style="margin: 0 0 14px">
+          <h3>Events <em>Concluded</em></h3>
+          <small
+            >Relive highlights, photo reels, and championship podiums</small
+          >
+        </div>
+        <div class="grid-arch">
+          <article class="a-card">
+            <div class="a-img">
+              <img
+                src="https://picsum.photos/seed/ganpati/300/260"
+                alt=""
+              /><span>Concluded Sep 2024</span>
+            </div>
+            <div class="a-body">
+              <small>Full Campus Festivity</small>
+              <h5>Ganpati Utsav &amp; Visarjan Celebration</h5>
+              <p>
+                10 days of eco-friendly clay idol worship, maha-aarti, daily
+                prasad distribution, and campus-wide procession.
+              </p>
+              <div class="a-foot">
+                <span
+                  ><svg class="i"><use href="#image" /></svg>240+ Photos
+                  Archived</span
+                ><a href="#"
+                  >View Gallery <svg class="i"><use href="#arrow" /></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+          <article class="a-card">
+            <div class="a-img">
+              <img
+                src="https://picsum.photos/seed/dahihandi/300/260"
+                alt=""
+              /><span>Concluded Aug 2024</span>
+            </div>
+            <div class="a-body">
+              <small>Tradition &amp; Athletics</small>
+              <h5>Janmashtami Dahi Handi Mahotsav</h5>
+              <p>
+                Five-tier human pyramids contested across 8 faculty houses.
+                Winners Mechanical Titans claimed the title.
+              </p>
+              <div class="a-foot">
+                <span
+                  ><svg class="i"><use href="#trophy" /></svg>Winners:
+                  Mechanical Titans</span
+                ><a href="#"
+                  >View Highlights <svg class="i"><use href="#arrow" /></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+          <article class="a-card">
+            <div class="a-img">
+              <img
+                src="https://picsum.photos/seed/freshers/300/260"
+                alt=""
+              /><span>Concluded Aug 2024</span>
+            </div>
+            <div class="a-body">
+              <small>Student Induction</small>
+              <h5>Orientation &amp; Freshers Bash 2024</h5>
+              <p>
+                Welcoming 3,200 incoming undergraduates with campus
+                walk-throughs, club expo booths, standup comedy.
+              </p>
+              <div class="a-foot">
+                <span
+                  ><svg class="i"><use href="#image" /></svg>520+ Portraits
+                  Captured</span
+                ><a href="#"
+                  >View Recap <svg class="i"><use href="#arrow" /></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+          <article class="a-card">
+            <div class="a-img">
+              <img
+                src="https://picsum.photos/seed/tugofwar/300/260"
+                alt=""
+              /><span>Concluded Aug 2024</span>
+            </div>
+            <div class="a-body">
+              <small>National Sports Day</small>
+              <h5>National Sports Day Inter-Dept Tug of War</h5>
+              <p>
+                Fierce strength competition featuring 18 faculty and student
+                squads. Civil Engineering clinched the gold.
+              </p>
+              <div class="a-foot">
+                <span
+                  ><svg class="i"><use href="#award" /></svg>Gold: Civil
+                  Engineering</span
+                ><a href="#"
+                  >View Results <svg class="i"><use href="#arrow" /></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+          <article class="a-card">
+            <div class="a-img">
+              <img src="https://picsum.photos/seed/cyber/300/260" alt="" /><span
+                >Concluded Jul 2024</span
+              >
+            </div>
+            <div class="a-body">
+              <small>Industry Certification</small>
+              <h5>CyberSecurity Workshop by RedHat</h5>
+              <p>
+                Intensive 2-day live exploitation, zero-day threat discovery,
+                and enterprise Linux hardening led by RedHat engineers.
+              </p>
+              <div class="a-foot">
+                <span
+                  ><svg class="i"><use href="#download" /></svg>Slides &amp;
+                  Code Lab Assets</span
+                ><a href="#"
+                  >View Materials <svg class="i"><use href="#arrow" /></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+          <article class="a-card">
+            <div class="a-img">
+              <img
+                src="https://picsum.photos/seed/rangoli/300/260"
+                alt=""
+              /><span>Concluded Jul 2024</span>
+            </div>
+            <div class="a-body">
+              <small>Creative Arts Guild</small>
+              <h5>Rangoli &amp; Diya Craft Competition</h5>
+              <p>
+                45 campus teams demonstrated peacock motifs, sustainable sawdust
+                mandalas, and terracotta lamp art.
+              </p>
+              <div class="a-foot">
+                <span
+                  ><svg class="i"><use href="#pen" /></svg>First Prize:
+                  Architecture Dept</span
+                ><a href="#"
+                  >View Exhibition <svg class="i"><use href="#arrow" /></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <button class="more">
+          <svg class="i"><use href="#history" /></svg>View More Archived Events
+          <svg class="i"><use href="#down" /></svg>
+        </button>
+      </section>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="wrap">
+        <div class="f-grid">
+          <div>
+            <a href="#"
+              ><img
+                class="logo-img sm"
+                alt="Logo"
+                src="../images/Event-dark.png"
+            /></a>
+            <p style="margin-top: 10px">
+              The official cultural and academic event gateway for Swaminarayan
+              University. Discover symposiums, hackathons, and galas in one
+              luminous collective.
+            </p>
+            <span class="verified"
+              ><svg class="i"><use href="#shield" /></svg>Official Institutional
+              Gateway • Kalol Campus</span
+            >
+          </div>
+          <div>
+            <h6>Quick Shortcuts</h6>
+            <ul>
+              <li>Home</li>
+              <li>Explore Events</li>
+              <li>My Passes &amp; Bookings</li>
+              <li>Wishlist Saved</li>
+              <li>Scholar Profile &amp; ID</li>
+            </ul>
+          </div>
+          <div>
+            <h6>Campus Headquarters</h6>
+            <p class="addr">
+              <svg class="i"><use href="#pin" /></svg
+              ><span
+                >Swaminarayan University Campus, Ahmedabad-Mehsana Highway, At
+                &amp; Po. Saij, Kalol, Dist. Gandhinagar, Gujarat - 382721</span
+              >
+            </p>
+            <a class="mail" href="mailto:events@swaminarayanuniversity.in"
+              ><svg class="i"><use href="#mail" /></svg
+              >events@swaminarayanuniversity.in</a
+            >
+          </div>
+          <div>
+            <h6>Stay Informed</h6>
+            <p>
+              Receive exclusive ticket invitations and gala notifications
+              directly to your inbox.
+            </p>
+            <div class="sub">
+              <input placeholder="university email" /><button>JOIN</button>
+            </div>
+          </div>
+        </div>
+        <div class="copy">
+          <span>Engineered &amp; Managed by <b>RenderX Limited</b></span>
+          <span
+            >© 2026 <b style="color: #222">RenderX Limited</b>. All rights
+            reserved.</span
+          >
+          <nav>
+            <a href="#">Privacy Policy</a><a href="#">Terms of Service</a
+            ><a href="#">Help Center</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

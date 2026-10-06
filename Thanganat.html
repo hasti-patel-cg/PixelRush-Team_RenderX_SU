@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thanganat 5.0 | Campus Events</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@400;600;700&family=Space+Grotesk:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="calenderandtha.css" />
+  </head>
+
+  <body data-page="thanganat" class="event-detail-page">
+ <!-- ===================== NAVBAR ===================== -->
+    <header class="navbar">
+      <a class="navbar__logo" href="index.html" aria-label="Campus Event Hub home">
+        <img
+          src="https://www.figma.com/api/mcp/asset/f8bbb59c-a324-44e9-8dbc-4fd00ad4f92d.png"
+          alt="Campus Event Hub logo"
+        />
+      </a>
+
+      <nav class="navbar__links" aria-label="Main navigation">
+        <a class="nav-pill nav-pill--home" href="index.html">
+          <svg
+            class="nav-pill__home-icon"
+            width="12"
+            height="12"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#ffffff"
+            stroke-width="2.4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M3 11.5 12 4l9 7.5" />
+            <path d="M5 10v10h14V10" />
+          </svg>
+          <span>Home</span>
+        </a>
+
+        <a class="nav-pill nav-pill--events" href="Event.html">
+          <img
+            src="https://www.figma.com/api/mcp/asset/0bf1fec1-b557-452b-96b1-70399f082330.svg"
+            alt=""
+            width="11"
+            height="11"
+          />
+          <span>Events</span>
+        </a>
+
+        <a class="nav-pill nav-pill--thanganat" href="Thanganat.html">
+          <img
+            src="https://www.figma.com/api/mcp/asset/c5a8416e-d333-48ff-80be-ed51b41cfe12.svg"
+            alt=""
+            width="10"
+            height="10"
+          />
+          <span>Thanganat 5.0</span>
+        </a>
+
+        <a class="nav-pill nav-pill--passes" href="my-pass.html">
+          <span class="nav-pill__passes-icon">
+            <img
+              src="https://www.figma.com/api/mcp/asset/21fa892d-32d7-4d3c-a2b7-bd0baba5b145.svg"
+              alt=""
+              width="17"
+              height="9"
+            />
+          </span>
+          <span>My Passes</span>
+          <span class="nav-badge nav-badge--gold">3</span>
+        </a>
+
+        <a class="nav-pill nav-pill--calendar" href="calendar.html">
+          <img
+            src="https://www.figma.com/api/mcp/asset/c6795a55-7b39-4415-9899-af556763dda8.svg"
+            alt=""
+            width="9"
+            height="10"
+          />
+          <span>Calendar</span>
+          <span class="nav-badge nav-badge--pink">2</span>
+        </a>
+      </nav>
+
+      <div class="account">
+        <div class="account__icon">
+          <button
+            class="account__icon-btn"
+            type="button"
+            aria-label="Notifications"
+          >
+            <img
+              class="account__ring"
+              src="https://www.figma.com/api/mcp/asset/41ed5562-c922-4468-8cc6-4e8ed416f29e.svg"
+              alt=""
+            />
+          </button>
+          <img
+            class="account__bell"
+            src="https://www.figma.com/api/mcp/asset/35218b5c-7b72-4729-9223-018c64f66910.svg"
+            alt=""
+          />
+          <img
+            class="account__dot"
+            src="https://www.figma.com/api/mcp/asset/e06c7608-78b2-4f12-b8c8-1ab016d8e098.svg"
+            alt=""
+          />
+        </div>
+
+        <div class="account__icon">
+          <a class="account__icon-btn" href="#" aria-label="Profile">
+            <img
+              class="account__ring"
+              src="https://www.figma.com/api/mcp/asset/e3dbbaa6-8101-4e72-b7ab-141093bbb952.svg"
+              alt=""
+            />
+          </a>
+          <span class="account__user">
+            <img
+              src="https://www.figma.com/api/mcp/asset/d389f5e0-8050-4213-903f-39bae2247bd2.svg"
+              alt=""
+            />
+          </span>
+        </div>
+
+        <div class="account__details">
+          <button class="account-card" type="button">
+            <span class="account-card__photo">
+              <img
+                src="https://www.figma.com/api/mcp/asset/fed3beb0-1df6-4b80-9ce4-539c32f1e996.png"
+                alt="Shivam Tripathi"
+                width="32"
+                height="32"
+              />
+            </span>
+            <span class="account-card__text">
+              <span class="account-card__name">Shivam Tripathi</span>
+              <span class="account-card__role">Student</span>
+            </span>
+            <span class="account-card__arrow">
+              <img
+                src="https://www.figma.com/api/mcp/asset/1c38ee90-d84a-4027-a995-aac36b9cccf6.svg"
+                alt=""
+              />
+            </span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="wrap">
+      <section class="hero">
+        <div class="hero-text">
+          <p class="crumb">Thanganat 5.0</p>
+          <p class="tag">Cultural Mega Gala • Navratri 2025</p>
+
+          <h1>
+            Thanganat
+            <em>5.0</em>
+          </h1>
+
+          <div class="star">
+            <img src="images/kirtidan.jpg" alt="Kirtidan Gadhvi" />
+            <div>
+              <small>Special Star Performer • Headline Attraction</small>
+              <strong>Sangeet Shiromani Kirtidan Gadhvi</strong>
+              <span>
+                Live in Grand Rasotsav Concert • 6 Hours of High-Energy Folk
+                Beats &amp; Iconic Garba...
+              </span>
+            </div>
+          </div>
+
+          <p class="lead">
+            Immerse yourself in six pulsating hours of traditional rhythm,
+            resonant dhol beats, and luminous heritage under the Kalol night
+            sky. Celebrating communal harmony and youthful brilliance with over
+            3,500 peers.
+          </p>
+
+          <div class="facts">
+            <div>
+              <small>Date &amp; Time</small>
+              <strong>Wed, 4th Oct</strong>
+              <span>7:00 PM - 12:00 AM</span>
+            </div>
+            <div>
+              <small>Venue Arena</small>
+              <strong>New Cricket Ground</strong>
+              <span>Kalol Main Campus</span>
+            </div>
+            <div>
+              <small>Turnout Expectation</small>
+              <strong>3,500+ Attendees</strong>
+              <span>Students &amp; Faculty</span>
+            </div>
+            <div>
+              <small>Access Protocol</small>
+              <strong>Free Admission</strong>
+              <span>Valid SU ID Mandatory</span>
+            </div>
+          </div>
+
+          <div class="actions">
+            <a
+              class="btn thanganat-registration-button"
+              href="#thanganat-pass-selection"
+              >Register Now</a
+            >
+            <a class="btn-ghost" href="#">Volunteer / Contribute</a>
+            <a class="heart" href="#" aria-label="Wishlist">♡</a>
+          </div>
+        </div>
+
+        <figure class="hero-img">
+          <img src="images/hero.jpg" alt="Garba night crowd at Thanganat" />
+          <figcaption>
+            <b>Live Raas Orchestra</b>
+            <span>Kirtidan Gadhvi &amp; Campus Beat Club</span>
+            <i>Main Arena</i>
+          </figcaption>
+        </figure>
+      </section>
+
+      <nav class="tabs" aria-label="Event sections">
+        <a class="on" href="#">About &amp; Guidelines</a>
+        <a href="#">Media Gallery</a>
+        <a href="#">Competitions</a>
+        <a href="#">Amenities &amp; Food</a>
+        <a href="#">Dignitaries &amp; Guests</a>
+        <a href="#">Event Organizers</a>
+        <a href="#">Volunteer Call</a>
+        <a href="#">Student Voice</a>
+      </nav>
+
+      <div class="cols">
+        <div class="main">
+          <section class="card">
+            <h2>About Thanganat 5.0</h2>
+            <p>
+              Swaminarayan University&apos;s marquee Navratri congregation
+              returns in its fifth edition, bigger and more dazzling than ever.
+              Hosted on the expansive New Cricket Ground, Thanganat 5.0 bridges
+              contemporary campus camaraderie. Featuring star performer Kirtidan
+              Gadhvi live on stage, whether you are stepping into the Dodhiya
+              circle for the first time or competing for the coveted Winners
+              Podium, the Raas ground awaits.
+            </p>
+
+            <div class="two">
+              <div class="box">
+                <h3>Dress Code Standards</h3>
+                <p>
+                  Authentic traditional attire is mandatory for arena entry.
+                </p>
+                <p>
+                  <b>Gentlemen:</b> Kedia, Kurta Pyjama, or Dhoti Kurta<br />
+                  <b>Ladies:</b> Chaniya Choli or Bandhani Sarees
+                </p>
+                <p>
+                  Western wear &amp; casual footwear restricted inside the inner
+                  circle.
+                </p>
+              </div>
+
+              <div class="box">
+                <h3>Running Program Flow</h3>
+                <ul class="flow">
+                  <li>
+                    <b>06:30 PM</b
+                    ><span>Gates Open &amp; Security Validation</span>
+                  </li>
+                  <li>
+                    <b>07:15 PM</b
+                    ><span>Maha Aarti with Chancellor &amp; Dignitaries</span>
+                  </li>
+                  <li>
+                    <b>08:00 PM</b
+                    ><span>Kirtidan Gadhvi Live Mega Rasotsav</span>
+                  </li>
+                  <li>
+                    <b>10:45 PM</b
+                    ><span>Jury Judging &amp; Grand Awards Ceremony</span>
+                  </li>
+                  <li>
+                    <b>11:15 PM</b
+                    ><span>Sanedo &amp; Youth Finale Extravaganza</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="box">
+              <h3>Safety, Conduct &amp; Zero-Tolerance Policy</h3>
+              <p>
+                Every attendee must present an unexpired Swaminarayan University
+                physical/digital ID alongside their EventHive QR Pass. Metal
+                detection, mandatory bag scans, and internal CCTV surveillance
+                are active across the perimeter. Substance consumption of any
+                kind will result in immediate disqualification and collective
+                removal.
+              </p>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="head">
+              <div>
+                <h2>Memories &amp; Teaser Reel</h2>
+                <p class="sub">
+                  Snapshots from Thanganat 4.0 and this year&apos;s campus
+                  teasers
+                </p>
+              </div>
+              <a class="pill" href="#">+ Contribute Media</a>
+            </div>
+
+            <div class="gallery">
+              <figure class="g1">
+                <img src="images/teaser.jpg" alt="Official teaser" />
+                <figcaption>Official Teaser (0:14)</figcaption>
+              </figure>
+              <figure class="g2">
+                <img src="images/dandiya.jpg" alt="Dandiya sync round" />
+                <figcaption>Dandiya Sync Round</figcaption>
+              </figure>
+              <figure>
+                <img src="images/aarti.jpg" alt="Maha Aarti ceremony" />
+                <figcaption>Maha Aarti Ceremony</figcaption>
+              </figure>
+              <figure>
+                <img src="images/winners.jpg" alt="Winners podium" />
+                <figcaption>Winners Podium 2024</figcaption>
+              </figure>
+              <figure>
+                <img src="images/food.jpg" alt="Food plaza" />
+                <figcaption>Food Plaza Arena</figcaption>
+              </figure>
+            </div>
+          </section>
+
+          <section class="card">
+            <h2>Gala Competitions &amp; Cash Prizes</h2>
+            <p class="sub">
+              Judged by state folk exponents. Total Prize Pool: ₹75,000
+            </p>
+
+            <div class="two">
+              <article class="comp">
+                <span class="chip">Individual &amp; Duo</span>
+                <b class="pool">₹25,000 Pool</b>
+                <h3>Best Raas Dancer (Male / Female)</h3>
+                <p>
+                  Evaluated on footwork complexity, rhythm synchronization,
+                  stamina, authentic step forms, and stage beauty.
+                </p>
+                <a href="#">Register for Dance Contest</a>
+              </article>
+
+              <article class="comp">
+                <span class="chip">Open Category</span>
+                <b class="pool">₹20,000 Pool</b>
+                <h3>Best Traditional Attire &amp; Styling</h3>
+                <p>
+                  Evaluated on historical authenticity, handloom embroidery,
+                  jewellery coordination, and ethnic poise.
+                </p>
+                <a href="#">Register for Dress Contest</a>
+              </article>
+            </div>
+          </section>
+
+          <section class="card">
+            <h2>Included Campus Amenities</h2>
+            <p class="sub">
+              Every valid SU pass unlocks comprehensive hospitality perks
+            </p>
+
+            <div class="amen">
+              <div>
+                <h3>Food Court Coupons</h3>
+                <p>
+                  ₹100 token included for authentic snacks and Jalebi-Fafda
+                  corners.
+                </p>
+              </div>
+              <div>
+                <h3>Unlimited Hydration</h3>
+                <p>
+                  8 water dispenser stations with mineral water and energy
+                  electro-mix.
+                </p>
+              </div>
+              <div>
+                <h3>Medical Desk</h3>
+                <p>
+                  SU Ayurvedic &amp; Allopathic hospital paramedical team
+                  stationed on-site.
+                </p>
+              </div>
+              <div>
+                <h3>Secured Cloakroom</h3>
+                <p>
+                  Token-based locker counter to safely store bags and valuables.
+                </p>
+              </div>
+              <div>
+                <h3>Lost &amp; Found Booth</h3>
+                <p>
+                  Real-time digital registration booth for displaced keys and
+                  devices.
+                </p>
+              </div>
+              <div>
+                <h3>Campus Parking</h3>
+                <p>
+                  Designated zones for two-wheelers and registered
+                  four-wheelers.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <aside class="side">
+          <section class="card pass" id="thanganat-pass-selection">
+            <p class="urgent">● ONLY 42 SEATS LEFT — FILLING RAPIDLY!</p>
+            <small class="eyebrow">Official Entry Passes</small>
+            <h2>Select Pass Category</h2>
+
+            <!-- Radio Button 1 (Default Selected) -->
+            <label class="opt sel">
+              <input type="radio" name="pass_type" value="normal" checked />
+              <span>
+                <b>Normal Student Pass</b>
+                <small>General Arena Access + Snack Coupon</small>
+              </span>
+              <strong>₹599</strong>
+            </label>
+
+            <!-- Radio Button 2 -->
+            <label class="opt pop">
+              <input type="radio" name="pass_type" value="vip" />
+              <i>Most Popular</i>
+              <span>
+                <b>VIP Rasotsav Pass</b>
+                <small>Front Ring Access • Full Dinner Buffet</small>
+              </span>
+              <strong>₹1,199</strong>
+            </label>
+
+            <!-- Radio Button 3 -->
+            <label class="opt">
+              <input type="radio" name="pass_type" value="alumni" />
+              <span>
+                <b>Alumni &amp; Guest Pass</b>
+                <small>Reserved Lounge • VIP Valet Access</small>
+              </span>
+              <strong>₹1,999</strong>
+            </label>
+
+            <div class="quota">
+              <span>Pass Quota Filled</span>
+              <span>94% Sold Out</span>
+            </div>
+
+            <div class="bar"><div></div></div>
+
+            <a
+              class="btn full thanganat-registration-button"
+              href="mailto:events@swaminarayanuniversity.ac.in?subject=Thanganat%205.0%20Registration"
+              >REGISTER BY EMAIL →</a
+            >
+            <p class="note">
+              Instant Barcode sync to &apos;My Pass&apos; section
+            </p>
+
+            <ul class="checks">
+              <li>Physical SU Student ID card or Guest QR required</li>
+              <li>1 guest pass permitted after enrollment</li>
+              <li>Live streaming for campus alumni via portal</li>
+            </ul>
+          </section>
+
+          <section class="card loc">
+            <div class="head">
+              <h3>Campus Location</h3>
+              <small>Gate 02 &amp; 03 Entry</small>
+            </div>
+
+            <p>
+              Swaminarayan University, Kalol Campus Ahmedabad-Mansa Highway, At
+              &amp; Po. Saij, Kalol, Dist. Gandhinagar - 382721
+            </p>
+
+            <div class="map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3666.503308295746!2d72.50539287500924!3d23.224765108753196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395c26108564d09f%3A0x82290bc0a7189392!2sSwaminarayan%20College%20Of%20Engineering%20%26%20Technology%2C%20G.I.D.C.%20Estate%2C%20Kalol%2C%20Gujarat%20382725!5e0!3m2!1sen!2sin!4v1791258154215!5m2!1sen!2sin"
+                width="100%"
+                height="200"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+              >
+              </iframe>
+            </div>
+
+            <div class="head">
+              <small>Security Gate 02: Student entry</small>
+              <a class="pill" href="#">Open Navigation Route</a>
+            </div>
+          </section>
+
+          <section class="card help">
+            <b>Need Help with RSVP?</b>
+            <span>Contact SU Helpdesk: +91 79 2396 9000</span>
+          </section>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="foot">
+      <div class="wrap fgrid">
+        <div>
+          <img class="logo" src="images/logo.jpg" alt="Campus"/>
+        <span>© 2026 RenderX Limited. All rights reserved.</span>
+        <span>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Help Center</a>
+        </span>
+      </div>
+      
+    </footer>
+  </body>
+</html>

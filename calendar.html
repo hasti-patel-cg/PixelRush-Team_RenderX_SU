@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Campus Calendar | Campus Events</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@400;600;700&family=Space+Grotesk:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="calenderandtha.css" />
+  </head>
+  <body>
+   <!-- ===================== NAVBAR ===================== -->
+    <header class="navbar">
+      <a class="navbar__logo" href="index.html" aria-label="Campus Event Hub home">
+        <img
+          src="https://www.figma.com/api/mcp/asset/f8bbb59c-a324-44e9-8dbc-4fd00ad4f92d.png"
+          alt="Campus Event Hub logo"
+        />
+      </a>
+
+      <nav class="navbar__links" aria-label="Main navigation">
+        <a class="nav-pill nav-pill--home" href="index.html">
+          <svg
+            class="nav-pill__home-icon"
+            width="12"
+            height="12"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#ffffff"
+            stroke-width="2.4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M3 11.5 12 4l9 7.5" />
+            <path d="M5 10v10h14V10" />
+          </svg>
+          <span>Home</span>
+        </a>
+
+        <a class="nav-pill nav-pill--events" href="Event.html">
+          <img
+            src="https://www.figma.com/api/mcp/asset/0bf1fec1-b557-452b-96b1-70399f082330.svg"
+            alt=""
+            width="11"
+            height="11"
+          />
+          <span>Events</span>
+        </a>
+
+        <a class="nav-pill nav-pill--thanganat" href="Thanganat.html">
+          <img
+            src="https://www.figma.com/api/mcp/asset/c5a8416e-d333-48ff-80be-ed51b41cfe12.svg"
+            alt=""
+            width="10"
+            height="10"
+          />
+          <span>Thanganat 5.0</span>
+        </a>
+
+        <a class="nav-pill nav-pill--passes" href="my-pass.html">
+          <span class="nav-pill__passes-icon">
+            <img
+              src="https://www.figma.com/api/mcp/asset/21fa892d-32d7-4d3c-a2b7-bd0baba5b145.svg"
+              alt=""
+              width="17"
+              height="9"
+            />
+          </span>
+          <span>My Passes</span>
+          <span class="nav-badge nav-badge--gold">3</span>
+        </a>
+
+        <a class="nav-pill nav-pill--calendar" href="calendar.html">
+          <img
+            src="https://www.figma.com/api/mcp/asset/c6795a55-7b39-4415-9899-af556763dda8.svg"
+            alt=""
+            width="9"
+            height="10"
+          />
+          <span>Calendar</span>
+          <span class="nav-badge nav-badge--pink">2</span>
+        </a>
+      </nav>
+
+      <div class="account">
+        <div class="account__icon">
+          <button
+            class="account__icon-btn"
+            type="button"
+            aria-label="Notifications"
+          >
+            <img
+              class="account__ring"
+              src="https://www.figma.com/api/mcp/asset/41ed5562-c922-4468-8cc6-4e8ed416f29e.svg"
+              alt=""
+            />
+          </button>
+          <img
+            class="account__bell"
+            src="https://www.figma.com/api/mcp/asset/35218b5c-7b72-4729-9223-018c64f66910.svg"
+            alt=""
+          />
+          <img
+            class="account__dot"
+            src="https://www.figma.com/api/mcp/asset/e06c7608-78b2-4f12-b8c8-1ab016d8e098.svg"
+            alt=""
+          />
+        </div>
+
+        <div class="account__icon">
+          <a class="account__icon-btn" href="#" aria-label="Profile">
+            <img
+              class="account__ring"
+              src="https://www.figma.com/api/mcp/asset/e3dbbaa6-8101-4e72-b7ab-141093bbb952.svg"
+              alt=""
+            />
+          </a>
+          <span class="account__user">
+            <img
+              src="https://www.figma.com/api/mcp/asset/d389f5e0-8050-4213-903f-39bae2247bd2.svg"
+              alt=""
+            />
+          </span>
+        </div>
+
+        <div class="account__details">
+          <button class="account-card" type="button">
+            <span class="account-card__photo">
+              <img
+                src="https://www.figma.com/api/mcp/asset/fed3beb0-1df6-4b80-9ce4-539c32f1e996.png"
+                alt="Shivam Tripathi"
+                width="32"
+                height="32"
+              />
+            </span>
+            <span class="account-card__text">
+              <span class="account-card__name">Shivam Tripathi</span>
+              <span class="account-card__role">Student</span>
+            </span>
+            <span class="account-card__arrow">
+              <img
+                src="https://www.figma.com/api/mcp/asset/1c38ee90-d84a-4027-a995-aac36b9cccf6.svg"
+                alt=""
+              />
+            </span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <p class="crumb"><span>›</span> Calendar <b>TERM 2026-27</b></p>
+      <div class="top">
+        <h1>Campus Calendar</h1>
+        <div class="month">
+          <a href="#" aria-label="Previous">‹</a><strong>October 2026</strong
+          ><a href="#" aria-label="Next">›</a
+          ><a class="today" href="#">TODAY</a>
+        </div>
+      </div>
+      <div class="legend">
+        <span class="l0">No Event</span><span class="l1">Campus Event</span
+        ><span class="l2">Attending</span
+        ><em>SU Official Academic Term 2026-27</em>
+      </div>
+
+      <div class="cols">
+        <section class="cal">
+          <div class="week">
+            <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span
+            ><span>Fri</span><span>Sat</span><span>Sun</span>
+          </div>
+          <div class="grid">
+            <div class="d off"><b>30</b><span>Term Prep</span></div>
+            <div class="d"><b>1</b><span class="txt">Classes Begin</span></div>
+            <div class="d ev">
+              <b>2</b><i>HOLIDAY</i><span class="pl">Gandhi Jayanti</span>
+            </div>
+            <div class="d"><b>3</b><span>No events</span></div>
+            <a class="d att on" href="index.html"
+              ><b>4</b><span class="pl">Thanganat 5.0 Mega Gala</span
+              ><small>06:30 PM • Main Arena</small></a
+            >
+            <div class="d"><b>5</b><span>No events</span></div>
+            <div class="d"><b>6</b><span>No events</span></div>
+            <div class="d"><b>7</b><span>No events</span></div>
+            <div class="d"><b>8</b><span>No events</span></div>
+            <div class="d"><b>9</b><span>No events</span></div>
+            <div class="d ev">
+              <b>10</b><i>TECH</i><span class="pl">RoboWars Workshop</span>
+            </div>
+            <div class="d"><b>11</b><span>No events</span></div>
+            <div class="d ev">
+              <b>12</b><i>ARTS</i><span class="pl">Kala-Kriti Exhibition</span>
+            </div>
+            <div class="d"><b>13</b><span>No events</span></div>
+            <div class="d"><b>14</b><span>No events</span></div>
+            <div class="d ev">
+              <b>15</b><i>SYMP</i
+              ><span class="pl">AI Healthcare Symposium</span>
+            </div>
+            <div class="d"><b>16</b><span>No events</span></div>
+            <div class="d"><b>17</b><span>No events</span></div>
+            <div class="d att">
+              <b>18</b><span class="pl">SU-MUN 2025 Plenary</span
+              ><small>04:30 PM • Diplomatic</small>
+            </div>
+            <div class="d"><b>19</b><span>No events</span></div>
+            <div class="d"><b>20</b><span>No events</span></div>
+            <div class="d"><b>21</b><span>No events</span></div>
+            <div class="d ev">
+              <b>22</b><i>CLOUD</i><span class="pl">Google Cloud Jam</span>
+            </div>
+            <div class="d"><b>23</b><span>No events</span></div>
+            <div class="d ev">
+              <b>24</b><i>CAREER</i><span class="pl">Placement Expo</span>
+            </div>
+            <div class="d"><b>25</b><span>No events</span></div>
+            <div class="d ev">
+              <b>26</b><i>SPORTS</i><span class="pl">Cricket League</span>
+            </div>
+            <div class="d"><b>27</b><span>No events</span></div>
+            <div class="d"><b>28</b><span>No events</span></div>
+            <div class="d"><b>29</b><span>No events</span></div>
+            <div class="d ev">
+              <b>30</b><i>HACK</i><span class="pl">Pre-Hackathon Event</span>
+            </div>
+            <div class="d ev">
+              <b>31</b><i>GALA</i><span class="pl">Deepawali Lights</span>
+            </div>
+            <div class="d off"><b>1</b><span>Govardhan Puja</span></div>
+            <div class="d off"><b>2</b><span>Bhai Dooj</span></div>
+            <div class="d off"><b>3</b><span>Campus Recess</span></div>
+          </div>
+          <div class="next">
+            <span><b>Next Flagship: HackSU 2026</b> • Nov 8</span
+            ><a href="#">View Event</a>
+          </div>
+        </section>
+
+        <aside class="side">
+          <section class="panel">
+            <h2>Friday, 04 October 2024</h2>
+            <div class="where">
+              <span>SU New Cricket Ground</span><em>06:30 PM<br />Onwards</em>
+            </div>
+            <div class="st ok">
+              <b>Attending Status: Verified</b
+              ><span>Confirmed via Scholar ID (SU202204192)</span>
+            </div>
+            <div class="st dens">
+              <b>Campus Density: High</b
+              ><span>4,200+ Students Expected • Shuttles: 15m</span>
+            </div>
+            <div class="vip">
+              <div class="vh">
+                <h3>THANGANAT 5.0</h3>
+                <i>VIP ACCESS</i>
+              </div>
+              <div class="tk">
+                <div>
+                  <b>Tier A • New Cricket Ground</b
+                  ><span>Gate 1 FastScan Entry</span
+                  ><span>Shivam Tripathi (SU202204192)</span>
+                </div>
+                <img src="images/qr.jpg" alt="Pass QR code" />
+              </div>
+              <div class="vf">
+                <span>NFC Active</span
+                ><a href="index.html#pass">View Full Pass</a>
+              </div>
+            </div>
+            <h3 class="tl">Event Timeline</h3>
+            <ul class="time">
+              <li>
+                <em>Main Turnstiles</em><b>06:30 PM</b
+                ><span>Gates Open &amp; NFC Check-in</span>
+              </li>
+              <li>
+                <em>Central Stage</em><b>07:15 PM</b
+                ><span>Maha Aarti &amp; Lamp Lighting</span>
+              </li>
+              <li>
+                <em>Arena Ring</em><b>08:00 PM</b
+                ><span>Traditional Garba Rounds</span>
+              </li>
+              <li>
+                <em>Podium</em><b>10:45 PM</b><span>Mega Awards Ceremony</span>
+              </li>
+            </ul>
+            <div class="acts">
+              <a href="#">Invite</a
+              ><a class="venue" href="index.html">Venue Guide</a>
+            </div>
+          </section>
+          <section class="rule">
+            <span>Physical Campus ID required at turnstiles</span
+            ><em>SU<br />Protocol</em>
+          </section>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="foot">
+      <div class="wrap fgrid">
+        <div>
+          <img class="flogo" src="images/logo-lg.jpg" alt="Campus Event Hub" />
+          <p>
+            The official cultural and academic event gateway for Swaminarayan
+            University. Discover symposiums, hackathons, and galas in one
+            luminous collective.
+          </p>
+          <small>Official Institutional Gateway • Kalol Campus</small>
+        </div>
+        <div>
+          <h4>Quick Shortcuts</h4>
+          <a href="index.html">Home</a><a href="#">Explore Events</a
+          ><a href="#">My Passes &amp; Bookings</a><a href="#">Wishlist Saved</a
+          ><a href="#">Scholar Profile &amp; ID</a>
+        </div>
+        <div>
+          <h4>Campus Headquarters</h4>
+          <p>
+            Swaminarayan University Campus, Ahmedabad-Mehsana Highway, At &amp;
+            Po. Saij, Kalol, Dist. Gandhinagar, Gujarat - 382721
+          </p>
+          <a class="mail" href="mailto:events@swaminarayanuniversity.ac.in"
+            >events@swaminarayanuniversity.ac.in</a
+          >
+        </div>
+        <div>
+          <h4>Stay Informed</h4>
+          <p>
+            Receive exclusive ticket invitations and gala notifications directly
+            to your
+          </p>
+          <div class="join">
+            <input type="email" placeholder="university email" /><a href="#"
+              >JOIN</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="wrap legal">
+        <span>Engineered &amp; Managed by <a href="#">RenderX Limited</a></span
+        ><span>© 2026 <b>RenderX Limited</b>. All rights reserved.</span
+        ><span
+          ><a href="#">Privacy Policy</a><a href="#">Terms of Service</a
+          ><a href="#">Help Center</a></span
+        >
+      </div>
+    </footer>
+  </body>
+</html>
